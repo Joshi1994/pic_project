@@ -1,0 +1,87 @@
+[p LITE_MODE AUTOSTATIC PIC14 PICREGULAR PICMID ]
+[d version 1.1 ]
+[d edition pro ]
+[d chip 12F675 ]
+[d frameptr 6 ]
+"36 C:\Users\admin\Desktop\joshipro\ADCTIMER.X\adctimer.c
+[v _GetADCValue GetADCValue `(ui  1 e 2 0 ]
+"65
+[v _main main `(v  1 e 1 0 ]
+"62 C:\Program Files\Microchip\xc8\v1.44\sources\common\float.c
+[v ___ftpack __ftpack `(f  1 e 3 0 ]
+"86 C:\Program Files\Microchip\xc8\v1.44\sources\common\ftadd.c
+[v ___ftadd __ftadd `(f  1 e 3 0 ]
+"6 C:\Program Files\Microchip\xc8\v1.44\sources\pic\eeprom.c
+[v _eecpymem eecpymem `(v  1 e 1 0 ]
+"39
+[v _memcpyee memcpyee `(v  1 e 1 0 ]
+"70 C:\Program Files\Microchip\xc8\v1.44\include\pic12f675.h
+[v _TMR0 TMR0 `VEuc  1 e 1 @1 ]
+"562
+[v _CMCON CMCON `VEuc  1 e 1 @25 ]
+"621
+[v _ADRESH ADRESH `VEuc  1 e 1 @30 ]
+"641
+[v _ADCON0 ADCON0 `VEuc  1 e 1 @31 ]
+"725
+[v _OPTION_REG OPTION_REG `VEuc  1 e 1 @129 ]
+"1206
+[v _VRCON VRCON `VEuc  1 e 1 @153 ]
+"1382
+[v _ADRESL ADRESL `VEuc  1 e 1 @158 ]
+"1402
+[v _ANSEL ANSEL `VEuc  1 e 1 @159 ]
+"1545
+[v _GO_nDONE GO_nDONE `VEb  1 e 0 @249 ]
+"1547
+[v _GP0 GP0 `VEb  1 e 0 @40 ]
+"1551
+[v _GP2 GP2 `VEb  1 e 0 @42 ]
+"1627
+[v _T0IF T0IF `VEb  1 e 0 @90 ]
+"1655
+[v _TRISIO0 TRISIO0 `VEb  1 e 0 @1064 ]
+"1657
+[v _TRISIO1 TRISIO1 `VEb  1 e 0 @1065 ]
+"1659
+[v _TRISIO2 TRISIO2 `VEb  1 e 0 @1066 ]
+"1661
+[v _TRISIO3 TRISIO3 `VEb  1 e 0 @1067 ]
+"1663
+[v _TRISIO4 TRISIO4 `VEb  1 e 0 @1068 ]
+"1665
+[v _TRISIO5 TRISIO5 `VEb  1 e 0 @1069 ]
+"65 C:\Users\admin\Desktop\joshipro\ADCTIMER.X\adctimer.c
+[v _main main `(v  1 e 1 0 ]
+{
+"85
+[v main@ADC2 ADC2 `i  1 a 2 24 ]
+"84
+[v main@ADC1 ADC1 `i  1 a 2 22 ]
+"87
+[v main@TIMERS TIMERS `i  1 a 2 20 ]
+"86
+[v main@TIMERM TIMERM `i  1 a 2 18 ]
+"91
+[v main@ledf ledf `i  1 a 2 16 ]
+"89
+[v main@counts counts `i  1 a 2 14 ]
+"88
+[v main@count count `i  1 a 2 12 ]
+"90
+[v main@off off `i  1 a 2 10 ]
+"94
+[v main@ADC_value1 ADC_value1 `ui  1 a 2 8 ]
+"93
+[v main@ADC_value ADC_value `ui  1 a 2 6 ]
+"226
+} 0
+"36
+[v _GetADCValue GetADCValue `(ui  1 e 2 0 ]
+{
+[v GetADCValue@Channel Channel `uc  1 a 1 wreg ]
+[v GetADCValue@Channel Channel `uc  1 a 1 wreg ]
+"38
+[v GetADCValue@Channel Channel `uc  1 a 1 4 ]
+"57
+} 0

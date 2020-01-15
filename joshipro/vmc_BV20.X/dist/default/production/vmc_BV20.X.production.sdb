@@ -1,0 +1,524 @@
+[p LITE_MODE AUTOSTATIC PIC14 PICREGULAR PICMID ]
+[d version 1.1 ]
+[d edition pro ]
+[d chip 16F887 ]
+[d frameptr 6 ]
+"6 C:\Program Files\Microchip\xc8\v1.44\sources\common\awdiv.c
+[v ___awdiv __awdiv `(i  1 e 2 0 ]
+"6 C:\Program Files\Microchip\xc8\v1.44\sources\common\awmod.c
+[v ___awmod __awmod `(i  1 e 2 0 ]
+"492 C:\Program Files\Microchip\xc8\v1.44\sources\common\doprnt.c
+[v _sprintf sprintf `(i  1 e 2 0 ]
+"62 C:\Program Files\Microchip\xc8\v1.44\sources\common\float.c
+[v ___ftpack __ftpack `(f  1 e 3 0 ]
+"86 C:\Program Files\Microchip\xc8\v1.44\sources\common\ftadd.c
+[v ___ftadd __ftadd `(f  1 e 3 0 ]
+"6 C:\Program Files\Microchip\xc8\v1.44\sources\common\lwdiv.c
+[v ___lwdiv __lwdiv `(ui  1 e 2 0 ]
+"6 C:\Program Files\Microchip\xc8\v1.44\sources\common\lwmod.c
+[v ___lwmod __lwmod `(ui  1 e 2 0 ]
+"15 C:\Program Files\Microchip\xc8\v1.44\sources\common\Umul16.c
+[v ___wmul __wmul `(ui  1 e 2 0 ]
+"6 C:\Program Files\Microchip\xc8\v1.44\sources\pic\eeprom.c
+[v _eecpymem eecpymem `(v  1 e 1 0 ]
+"39
+[v _memcpyee memcpyee `(v  1 e 1 0 ]
+"6 C:\Program Files\Microchip\xc8\v1.44\sources\pic\eeread.c
+[v _eeprom_read eeprom_read `(uc  1 e 1 0 ]
+"6 C:\Program Files\Microchip\xc8\v1.44\sources\pic\eewrite.c
+[v _eeprom_write eeprom_write `(v  1 e 1 0 ]
+"134 C:\Users\admin\Desktop\joshipro\vmc_BV20.X\newmain.c
+[v _COINCOUNTER COINCOUNTER `II(v  1 e 1 0 ]
+"157
+[v _main main `(v  1 e 1 0 ]
+"1041
+[v _PORT_Init PORT_Init `(v  1 e 1 0 ]
+"1062
+[v _ToggleEpinOfLCD ToggleEpinOfLCD `(v  1 e 1 0 ]
+"1071
+[v _LCD_CmdWrite LCD_CmdWrite `(v  1 e 1 0 ]
+"1086
+[v _LCD_DataWrite LCD_DataWrite `(v  1 e 1 0 ]
+"1101
+[v _LCD_Init LCD_Init `(v  1 e 1 0 ]
+"1129
+[v _LCD_DisplayString LCD_DisplayString `(v  1 e 1 0 ]
+"1136
+[v _LCD_Clear LCD_Clear `(v  1 e 1 0 ]
+"1142
+[v _displaypass displaypass `(v  1 e 1 0 ]
+"1147
+[v _display display `(v  1 e 1 0 ]
+"1155
+[v _display_price display_price `(v  1 e 1 0 ]
+"1162
+[v _LCD_BuildChar LCD_BuildChar `(v  1 e 1 0 ]
+"1173
+[v _buzzer buzzer `(v  1 e 1 0 ]
+"1182
+[v _Write_EEPROM Write_EEPROM `(v  1 e 1 0 ]
+"1188
+[v _Read_EEPROM Read_EEPROM `(ui  1 e 2 0 ]
+"1195
+[v _Write_EEPROM_Price Write_EEPROM_Price `(v  1 e 1 0 ]
+"1202
+[v _Read_EEPROM_Price Read_EEPROM_Price `(ui  1 e 2 0 ]
+"1212
+[v _STOCK_EMPTY_ROUTINE STOCK_EMPTY_ROUTINE `(v  1 e 1 0 ]
+"1226
+[v _Set_Channel Set_Channel `(v  1 e 1 0 ]
+"1250
+[v _Monitor_Balance Monitor_Balance `(v  1 e 1 0 ]
+"1258
+[v _escprocess escprocess `(v  1 e 1 0 ]
+"164 C:\Program Files\Microchip\xc8\v1.44\include\pic16f887.h
+[v _PORTA PORTA `VEuc  1 e 1 @5 ]
+"226
+[v _PORTB PORTB `VEuc  1 e 1 @6 ]
+"288
+[v _PORTC PORTC `VEuc  1 e 1 @7 ]
+"350
+[v _PORTD PORTD `VEuc  1 e 1 @8 ]
+"412
+[v _PORTE PORTE `VEuc  1 e 1 @9 ]
+"457
+[v _INTCON INTCON `VEuc  1 e 1 @11 ]
+"1344
+[v _OPTION_REG OPTION_REG `VEuc  1 e 1 @129 ]
+"1414
+[v _TRISA TRISA `VEuc  1 e 1 @133 ]
+"1476
+[v _TRISB TRISB `VEuc  1 e 1 @134 ]
+"1538
+[v _TRISC TRISC `VEuc  1 e 1 @135 ]
+"1600
+[v _TRISD TRISD `VEuc  1 e 1 @136 ]
+"1662
+[v _TRISE TRISE `VEuc  1 e 1 @137 ]
+"1860
+[v _OSCCON OSCCON `VEuc  1 e 1 @143 ]
+"2344
+[v _WPUB WPUB `VEuc  1 e 1 @149 ]
+"2414
+[v _IOCB IOCB `VEuc  1 e 1 @150 ]
+"3243
+[v _EEDATA EEDATA `VEuc  1 e 1 @268 ]
+"3255
+[v _EEADR EEADR `VEuc  1 e 1 @269 ]
+"3385
+[v _ANSEL ANSEL `VEuc  1 e 1 @392 ]
+"3447
+[v _ANSELH ANSELH `VEuc  1 e 1 @393 ]
+"3497
+[v _EECON1 EECON1 `VEuc  1 e 1 @396 ]
+"3542
+[v _EECON2 EECON2 `VEuc  1 e 1 @397 ]
+"3694
+[v _CARRY CARRY `VEb  1 e 0 @24 ]
+"3780
+[v _GIE GIE `VEb  1 e 0 @95 ]
+"3798
+[v _INTE INTE `VEb  1 e 0 @92 ]
+"3802
+[v _INTF INTF `VEb  1 e 0 @89 ]
+"3904
+[v _RA1 RA1 `VEb  1 e 0 @41 ]
+"3906
+[v _RA2 RA2 `VEb  1 e 0 @42 ]
+"3908
+[v _RA3 RA3 `VEb  1 e 0 @43 ]
+"3910
+[v _RA4 RA4 `VEb  1 e 0 @44 ]
+"3912
+[v _RA5 RA5 `VEb  1 e 0 @45 ]
+"3914
+[v _RA6 RA6 `VEb  1 e 0 @46 ]
+"3916
+[v _RA7 RA7 `VEb  1 e 0 @47 ]
+"3920
+[v _RB1 RB1 `VEb  1 e 0 @49 ]
+"3922
+[v _RB2 RB2 `VEb  1 e 0 @50 ]
+"3924
+[v _RB3 RB3 `VEb  1 e 0 @51 ]
+"3926
+[v _RB4 RB4 `VEb  1 e 0 @52 ]
+"3928
+[v _RB5 RB5 `VEb  1 e 0 @53 ]
+"3930
+[v _RB6 RB6 `VEb  1 e 0 @54 ]
+"3932
+[v _RB7 RB7 `VEb  1 e 0 @55 ]
+"3938
+[v _RC0 RC0 `VEb  1 e 0 @56 ]
+"3940
+[v _RC1 RC1 `VEb  1 e 0 @57 ]
+"3942
+[v _RC2 RC2 `VEb  1 e 0 @58 ]
+"3944
+[v _RC3 RC3 `VEb  1 e 0 @59 ]
+"3946
+[v _RC4 RC4 `VEb  1 e 0 @60 ]
+"3948
+[v _RC5 RC5 `VEb  1 e 0 @61 ]
+"3950
+[v _RC6 RC6 `VEb  1 e 0 @62 ]
+"3952
+[v _RC7 RC7 `VEb  1 e 0 @63 ]
+"3968
+[v _RD RD `VEb  1 e 0 @3168 ]
+"3972
+[v _RD1 RD1 `VEb  1 e 0 @65 ]
+"3974
+[v _RD2 RD2 `VEb  1 e 0 @66 ]
+"3976
+[v _RD3 RD3 `VEb  1 e 0 @67 ]
+"3978
+[v _RD4 RD4 `VEb  1 e 0 @68 ]
+"3980
+[v _RD5 RD5 `VEb  1 e 0 @69 ]
+"3982
+[v _RD6 RD6 `VEb  1 e 0 @70 ]
+"3984
+[v _RD7 RD7 `VEb  1 e 0 @71 ]
+"3986
+[v _RE0 RE0 `VEb  1 e 0 @72 ]
+"3988
+[v _RE1 RE1 `VEb  1 e 0 @73 ]
+"3990
+[v _RE2 RE2 `VEb  1 e 0 @74 ]
+"3992
+[v _RE3 RE3 `VEb  1 e 0 @75 ]
+"4116
+[v _TRISA0 TRISA0 `VEb  1 e 0 @1064 ]
+"4118
+[v _TRISA1 TRISA1 `VEb  1 e 0 @1065 ]
+"4126
+[v _TRISA5 TRISA5 `VEb  1 e 0 @1069 ]
+"4128
+[v _TRISA6 TRISA6 `VEb  1 e 0 @1070 ]
+"4130
+[v _TRISA7 TRISA7 `VEb  1 e 0 @1071 ]
+"4144
+[v _TRISB6 TRISB6 `VEb  1 e 0 @1078 ]
+"4146
+[v _TRISB7 TRISB7 `VEb  1 e 0 @1079 ]
+"4148
+[v _TRISC0 TRISC0 `VEb  1 e 0 @1080 ]
+"4150
+[v _TRISC1 TRISC1 `VEb  1 e 0 @1081 ]
+"4152
+[v _TRISC2 TRISC2 `VEb  1 e 0 @1082 ]
+"4154
+[v _TRISC3 TRISC3 `VEb  1 e 0 @1083 ]
+"4268
+[v _WR WR `VEb  1 e 0 @3169 ]
+"4270
+[v _WREN WREN `VEb  1 e 0 @3170 ]
+"354 C:\Program Files\Microchip\xc8\v1.44\sources\common\doprnt.c
+[v _dpowers dpowers `DC[5]ui  1 s 10 dpowers ]
+"126 C:\Users\admin\Desktop\joshipro\vmc_BV20.X\newmain.c
+[v _padcount1 padcount1 `ui  1 e 2 0 ]
+[v _rupee1 rupee1 `ui  1 e 2 0 ]
+[v _padcount2 padcount2 `ui  1 e 2 0 ]
+[v _rupee2 rupee2 `ui  1 e 2 0 ]
+[v _balance balance `ui  1 e 2 0 ]
+[v _padcount padcount `ui  1 e 2 0 ]
+[v _rupee rupee `ui  1 e 2 0 ]
+"127
+[v _padcount3 padcount3 `ui  1 e 2 0 ]
+[v _rupee3 rupee3 `ui  1 e 2 0 ]
+[v _padcount4 padcount4 `ui  1 e 2 0 ]
+[v _rupee4 rupee4 `ui  1 e 2 0 ]
+[v _padcount5 padcount5 `ui  1 e 2 0 ]
+[v _rupee5 rupee5 `ui  1 e 2 0 ]
+"128
+[v _value value `ui  1 e 2 0 ]
+[v _error_count error_count `ui  1 e 2 0 ]
+[v _count count `ui  1 e 2 0 ]
+[v _num num `ui  1 e 2 0 ]
+"129
+[v _stock stock `ui  1 e 2 0 ]
+"130
+[v _stock_data stock_data `uc  1 e 1 0 ]
+"131
+[v _status status `b  1 e 0 0 ]
+[v _menu menu `b  1 e 0 0 ]
+[v _set set `b  1 e 0 0 ]
+[v _check check `b  1 e 0 0 ]
+[v _pad pad `b  1 e 0 0 ]
+[v _coin coin `b  1 e 0 0 ]
+[v _run run `b  1 e 0 0 ]
+[v _coin_input coin_input `b  1 e 0 0 ]
+[v _motor motor `b  1 e 0 0 ]
+[v _Qflag Qflag `b  1 e 0 0 ]
+"132
+[v _RupeeSymbol RupeeSymbol `[8]uc  1 e 8 0 ]
+"155
+[v _start start `i  1 e 2 0 ]
+"156
+[v _dispvalue dispvalue `[10]uc  1 e 10 0 ]
+"157
+[v _main main `(v  1 e 1 0 ]
+{
+"1037
+} 0
+"1258
+[v _escprocess escprocess `(v  1 e 1 0 ]
+{
+"1272
+} 0
+"1142
+[v _displaypass displaypass `(v  1 e 1 0 ]
+{
+[v displaypass@data data `i  1 p 2 9 ]
+"1146
+} 0
+"6 C:\Program Files\Microchip\xc8\v1.44\sources\common\awmod.c
+[v ___awmod __awmod `(i  1 e 2 0 ]
+{
+"11
+[v ___awmod@sign sign `uc  1 a 1 6 ]
+[v ___awmod@counter counter `uc  1 a 1 5 ]
+"6
+[v ___awmod@divisor divisor `i  1 p 2 0 ]
+[v ___awmod@dividend dividend `i  1 p 2 2 ]
+"35
+} 0
+"6 C:\Program Files\Microchip\xc8\v1.44\sources\common\awdiv.c
+[v ___awdiv __awdiv `(i  1 e 2 0 ]
+{
+"11
+[v ___awdiv@quotient quotient `i  1 a 2 7 ]
+"12
+[v ___awdiv@sign sign `uc  1 a 1 6 ]
+[v ___awdiv@counter counter `uc  1 a 1 5 ]
+"6
+[v ___awdiv@divisor divisor `i  1 p 2 0 ]
+[v ___awdiv@dividend dividend `i  1 p 2 2 ]
+"42
+} 0
+"1155 C:\Users\admin\Desktop\joshipro\vmc_BV20.X\newmain.c
+[v _display_price display_price `(v  1 e 1 0 ]
+{
+[v display_price@data data `i  1 p 2 28 ]
+"1160
+} 0
+"1147
+[v _display display `(v  1 e 1 0 ]
+{
+[v display@data data `i  1 p 2 28 ]
+"1153
+} 0
+"492 C:\Program Files\Microchip\xc8\v1.44\sources\common\doprnt.c
+[v _sprintf sprintf `(i  1 e 2 0 ]
+{
+[v sprintf@sp sp `*.4uc  1 a 1 wreg ]
+"528
+[v sprintf@val val `ui  1 a 2 24 ]
+"499
+[v sprintf@c c `c  1 a 1 27 ]
+"506
+[v sprintf@prec prec `c  1 a 1 23 ]
+"508
+[v sprintf@flag flag `uc  1 a 1 22 ]
+"494
+[v sprintf@ap ap `[1]*.4v  1 a 1 21 ]
+"492
+[v sprintf@sp sp `*.4uc  1 a 1 wreg ]
+[v sprintf@f f `*.25DCuc  1 p 2 14 ]
+"533
+[v sprintf@sp sp `*.4uc  1 a 1 26 ]
+"1541
+} 0
+"1195 C:\Users\admin\Desktop\joshipro\vmc_BV20.X\newmain.c
+[v _Write_EEPROM_Price Write_EEPROM_Price `(v  1 e 1 0 ]
+{
+[v Write_EEPROM_Price@a1 a1 `uc  1 a 1 wreg ]
+[v Write_EEPROM_Price@a1 a1 `uc  1 a 1 wreg ]
+[v Write_EEPROM_Price@a2 a2 `uc  1 p 1 17 ]
+[v Write_EEPROM_Price@a3 a3 `uc  1 p 1 18 ]
+[v Write_EEPROM_Price@data_value data_value `ui  1 p 2 19 ]
+"1197
+[v Write_EEPROM_Price@a1 a1 `uc  1 a 1 22 ]
+"1200
+} 0
+"1182
+[v _Write_EEPROM Write_EEPROM `(v  1 e 1 0 ]
+{
+[v Write_EEPROM@a1 a1 `uc  1 a 1 wreg ]
+[v Write_EEPROM@a1 a1 `uc  1 a 1 wreg ]
+[v Write_EEPROM@a2 a2 `uc  1 p 1 17 ]
+[v Write_EEPROM@data_value data_value `ui  1 p 2 18 ]
+"1184
+[v Write_EEPROM@a1 a1 `uc  1 a 1 21 ]
+"1186
+} 0
+"6 C:\Program Files\Microchip\xc8\v1.44\sources\pic\eewrite.c
+[v _eeprom_write eeprom_write `(v  1 e 1 0 ]
+{
+[v eeprom_write@addr addr `uc  1 a 1 wreg ]
+[v eeprom_write@addr addr `uc  1 a 1 wreg ]
+[v eeprom_write@value value `uc  1 p 1 14 ]
+[v eeprom_write@addr addr `uc  1 a 1 16 ]
+"9
+} 0
+"6 C:\Program Files\Microchip\xc8\v1.44\sources\common\lwmod.c
+[v ___lwmod __lwmod `(ui  1 e 2 0 ]
+{
+"11
+[v ___lwmod@counter counter `uc  1 a 1 13 ]
+"6
+[v ___lwmod@divisor divisor `ui  1 p 2 8 ]
+[v ___lwmod@dividend dividend `ui  1 p 2 10 ]
+"26
+} 0
+"6 C:\Program Files\Microchip\xc8\v1.44\sources\common\lwdiv.c
+[v ___lwdiv __lwdiv `(ui  1 e 2 0 ]
+{
+"11
+[v ___lwdiv@quotient quotient `ui  1 a 2 5 ]
+"12
+[v ___lwdiv@counter counter `uc  1 a 1 7 ]
+"6
+[v ___lwdiv@divisor divisor `ui  1 p 2 0 ]
+[v ___lwdiv@dividend dividend `ui  1 p 2 2 ]
+"31
+} 0
+"1226 C:\Users\admin\Desktop\joshipro\vmc_BV20.X\newmain.c
+[v _Set_Channel Set_Channel `(v  1 e 1 0 ]
+{
+[v Set_Channel@data data `ui  1 p 2 0 ]
+"1248
+} 0
+"1212
+[v _STOCK_EMPTY_ROUTINE STOCK_EMPTY_ROUTINE `(v  1 e 1 0 ]
+{
+"1224
+} 0
+"1173
+[v _buzzer buzzer `(v  1 e 1 0 ]
+{
+"1176
+[v buzzer@i i `i  1 a 2 3 ]
+"1173
+[v buzzer@a a `ui  1 p 2 0 ]
+"1179
+} 0
+"1129
+[v _LCD_DisplayString LCD_DisplayString `(v  1 e 1 0 ]
+{
+[v LCD_DisplayString@s s `*.26DCuc  1 p 2 3 ]
+"1133
+} 0
+"1136
+[v _LCD_Clear LCD_Clear `(v  1 e 1 0 ]
+{
+"1140
+} 0
+"1202
+[v _Read_EEPROM_Price Read_EEPROM_Price `(ui  1 e 2 0 ]
+{
+[v Read_EEPROM_Price@b1 b1 `uc  1 a 1 wreg ]
+"1204
+[v Read_EEPROM_Price@c3 c3 `ui  1 a 2 17 ]
+[v Read_EEPROM_Price@c2 c2 `ui  1 a 2 15 ]
+[v Read_EEPROM_Price@c1 c1 `ui  1 a 2 13 ]
+"1202
+[v Read_EEPROM_Price@b1 b1 `uc  1 a 1 wreg ]
+[v Read_EEPROM_Price@b2 b2 `uc  1 p 1 6 ]
+[v Read_EEPROM_Price@b3 b3 `uc  1 p 1 7 ]
+"1204
+[v Read_EEPROM_Price@b1 b1 `uc  1 a 1 12 ]
+"1209
+} 0
+"1188
+[v _Read_EEPROM Read_EEPROM `(ui  1 e 2 0 ]
+{
+[v Read_EEPROM@b1 b1 `uc  1 a 1 wreg ]
+"1190
+[v Read_EEPROM@c2 c2 `ui  1 a 2 13 ]
+[v Read_EEPROM@c1 c1 `ui  1 a 2 11 ]
+"1188
+[v Read_EEPROM@b1 b1 `uc  1 a 1 wreg ]
+[v Read_EEPROM@b2 b2 `uc  1 p 1 6 ]
+"1190
+[v Read_EEPROM@b1 b1 `uc  1 a 1 10 ]
+"1194
+} 0
+"6 C:\Program Files\Microchip\xc8\v1.44\sources\pic\eeread.c
+[v _eeprom_read eeprom_read `(uc  1 e 1 0 ]
+{
+[v eeprom_read@addr addr `uc  1 a 1 wreg ]
+[v eeprom_read@addr addr `uc  1 a 1 wreg ]
+"9
+[v eeprom_read@addr addr `uc  1 a 1 1 ]
+"12
+} 0
+"15 C:\Program Files\Microchip\xc8\v1.44\sources\common\Umul16.c
+[v ___wmul __wmul `(ui  1 e 2 0 ]
+{
+"17
+[v ___wmul@product product `ui  1 a 2 4 ]
+"15
+[v ___wmul@multiplier multiplier `ui  1 p 2 0 ]
+[v ___wmul@multiplicand multiplicand `ui  1 p 2 2 ]
+"53
+} 0
+"1041 C:\Users\admin\Desktop\joshipro\vmc_BV20.X\newmain.c
+[v _PORT_Init PORT_Init `(v  1 e 1 0 ]
+{
+"1060
+} 0
+"1101
+[v _LCD_Init LCD_Init `(v  1 e 1 0 ]
+{
+"1126
+} 0
+"1162
+[v _LCD_BuildChar LCD_BuildChar `(v  1 e 1 0 ]
+{
+[v LCD_BuildChar@loc loc `uc  1 a 1 wreg ]
+"1164
+[v LCD_BuildChar@i i `uc  1 a 1 6 ]
+"1162
+[v LCD_BuildChar@loc loc `uc  1 a 1 wreg ]
+[v LCD_BuildChar@p p `*.4uc  1 p 1 3 ]
+"1165
+[v LCD_BuildChar@loc loc `uc  1 a 1 5 ]
+"1172
+} 0
+"1086
+[v _LCD_DataWrite LCD_DataWrite `(v  1 e 1 0 ]
+{
+[v LCD_DataWrite@LCDChar LCDChar `uc  1 a 1 wreg ]
+[v LCD_DataWrite@LCDChar LCDChar `uc  1 a 1 wreg ]
+"1088
+[v LCD_DataWrite@LCDChar LCDChar `uc  1 a 1 2 ]
+"1098
+} 0
+"1071
+[v _LCD_CmdWrite LCD_CmdWrite `(v  1 e 1 0 ]
+{
+[v LCD_CmdWrite@Command Command `uc  1 a 1 wreg ]
+[v LCD_CmdWrite@Command Command `uc  1 a 1 wreg ]
+"1073
+[v LCD_CmdWrite@Command Command `uc  1 a 1 2 ]
+"1084
+} 0
+"1062
+[v _ToggleEpinOfLCD ToggleEpinOfLCD `(v  1 e 1 0 ]
+{
+"1068
+} 0
+"134
+[v _COINCOUNTER COINCOUNTER `II(v  1 e 1 0 ]
+{
+"154
+} 0
+"1250
+[v _Monitor_Balance Monitor_Balance `(v  1 e 1 0 ]
+{
+[v Monitor_Balance@amount amount `ui  1 p 2 0 ]
+"1256
+} 0

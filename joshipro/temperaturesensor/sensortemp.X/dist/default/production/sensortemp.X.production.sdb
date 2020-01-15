@@ -1,0 +1,92 @@
+[p LITE_MODE AUTOSTATIC PIC14 PICREGULAR PICMID ]
+[d version 1.1 ]
+[d edition pro ]
+[d chip 16F676 ]
+[d frameptr 6 ]
+"19 C:\Users\admin\Desktop/joshi/lcd_44780_pic16/sensor.c
+[v _main main `(v  1 e 1 0 ]
+"75
+[v _sensor_init sensor_init `(i  1 e 2 0 ]
+"105
+[v _write write `(i  1 e 2 0 ]
+"134
+[v _Read Read `(uc  1 e 1 0 ]
+"62 C:\Program Files\Microchip\xc8\v1.44\sources\common\float.c
+[v ___ftpack __ftpack `(f  1 e 3 0 ]
+"86 C:\Program Files\Microchip\xc8\v1.44\sources\common\ftadd.c
+[v ___ftadd __ftadd `(f  1 e 3 0 ]
+"62 C:\Program Files\Microchip\xc8\v1.44\sources\common\ftmul.c
+[v ___ftmul __ftmul `(f  1 e 3 0 ]
+"28 C:\Program Files\Microchip\xc8\v1.44\sources\common\lwtoft.c
+[v ___lwtoft __lwtoft `(f  1 e 3 0 ]
+"6 C:\Program Files\Microchip\xc8\v1.44\sources\pic\eeprom.c
+[v _eecpymem eecpymem `(v  1 e 1 0 ]
+"39
+[v _memcpyee memcpyee `(v  1 e 1 0 ]
+"1533 C:\Program Files\Microchip\xc8\v1.44\include\pic16f676.h
+[v _RA0 RA0 `VEb  1 e 0 @40 ]
+"1599
+[v _TRISA0 TRISA0 `VEb  1 e 0 @1064 ]
+"19 C:\Users\admin\Desktop/joshi/lcd_44780_pic16/sensor.c
+[v _main main `(v  1 e 1 0 ]
+{
+"23
+[v main@temp temp `f  1 a 3 31 ]
+"22
+[v main@temphigh temphigh `ui  1 a 2 29 ]
+[v main@templow templow `ui  1 a 2 27 ]
+"53
+} 0
+"105
+[v _write write `(i  1 e 2 0 ]
+{
+[v write@cmd cmd `uc  1 a 1 wreg ]
+"108
+[v write@i i `uc  1 a 1 2 ]
+"105
+[v write@cmd cmd `uc  1 a 1 wreg ]
+"110
+[v write@cmd cmd `uc  1 a 1 1 ]
+"132
+} 0
+"75
+[v _sensor_init sensor_init `(i  1 e 2 0 ]
+{
+"103
+} 0
+"28 C:\Program Files\Microchip\xc8\v1.44\sources\common\lwtoft.c
+[v ___lwtoft __lwtoft `(f  1 e 3 0 ]
+{
+[v ___lwtoft@c c `ui  1 p 2 8 ]
+"31
+} 0
+"62 C:\Program Files\Microchip\xc8\v1.44\sources\common\ftmul.c
+[v ___ftmul __ftmul `(f  1 e 3 0 ]
+{
+"65
+[v ___ftmul@f3_as_product f3_as_product `um  1 a 3 19 ]
+"64
+[v ___ftmul@sign sign `uc  1 a 1 23 ]
+[v ___ftmul@cntr cntr `uc  1 a 1 22 ]
+[v ___ftmul@exp exp `uc  1 a 1 18 ]
+"62
+[v ___ftmul@f1 f1 `f  1 p 3 8 ]
+[v ___ftmul@f2 f2 `f  1 p 3 11 ]
+"157
+} 0
+"62 C:\Program Files\Microchip\xc8\v1.44\sources\common\float.c
+[v ___ftpack __ftpack `(f  1 e 3 0 ]
+{
+[v ___ftpack@arg arg `um  1 p 3 0 ]
+[v ___ftpack@exp exp `uc  1 p 1 3 ]
+[v ___ftpack@sign sign `uc  1 p 1 4 ]
+"86
+} 0
+"134 C:\Users\admin\Desktop/joshi/lcd_44780_pic16/sensor.c
+[v _Read Read `(uc  1 e 1 0 ]
+{
+"138
+[v Read@i i `uc  1 a 1 3 ]
+[v Read@result result `uc  1 a 1 2 ]
+"162
+} 0

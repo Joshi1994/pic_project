@@ -1,0 +1,48 @@
+[p LITE_MODE AUTOSTATIC PIC14 PICREGULAR PICMID ]
+[d version 1.1 ]
+[d edition pro ]
+[d chip 16F887 ]
+[d frameptr 6 ]
+"62 C:\Program Files\Microchip\xc8\v1.44\sources\common\float.c
+[v ___ftpack __ftpack `(f  1 e 3 0 ]
+"86 C:\Program Files\Microchip\xc8\v1.44\sources\common\ftadd.c
+[v ___ftadd __ftadd `(f  1 e 3 0 ]
+"6 C:\Program Files\Microchip\xc8\v1.44\sources\pic\eeprom.c
+[v _eecpymem eecpymem `(v  1 e 1 0 ]
+"39
+[v _memcpyee memcpyee `(v  1 e 1 0 ]
+"27 C:\Users\admin\Desktop\joshipro\spimaster887.X\newmain.c
+[v _SPI_String SPI_String `(v  1 e 1 0 ]
+"40
+[v _main main `(v  1 e 1 0 ]
+"841 C:\Program Files\Microchip\xc8\v1.44\include\pic16f887.h
+[v _SSPBUF SSPBUF `VEuc  1 e 1 @19 ]
+"848
+[v _SSPCON SSPCON `VEuc  1 e 1 @20 ]
+"2175
+[v _SSPSTAT SSPSTAT `VEuc  1 e 1 @148 ]
+"4154
+[v _TRISC3 TRISC3 `VEb  1 e 0 @1083 ]
+"4158
+[v _TRISC5 TRISC5 `VEb  1 e 0 @1085 ]
+"40 C:\Users\admin\Desktop\joshipro\spimaster887.X\newmain.c
+[v _main main `(v  1 e 1 0 ]
+{
+"47
+[v main@a a `i  1 a 2 6 ]
+"46
+[v main@i i `i  1 a 2 4 ]
+"57
+} 0
+"27
+[v _SPI_String SPI_String `(v  1 e 1 0 ]
+{
+[v SPI_String@a a `*.24DCuc  1 a 1 wreg ]
+"31
+[v SPI_String@i i `i  1 a 2 1 ]
+"27
+[v SPI_String@a a `*.24DCuc  1 a 1 wreg ]
+"32
+[v SPI_String@a a `*.24DCuc  1 a 1 3 ]
+"39
+} 0

@@ -1,0 +1,70 @@
+[p LITE_MODE AUTOSTATIC PIC14 PICREGULAR PICMID ]
+[d version 1.1 ]
+[d edition pro ]
+[d chip 16F883 ]
+[d frameptr 6 ]
+"62 C:\Program Files\Microchip\xc8\v1.44\sources\common\float.c
+[v ___ftpack __ftpack `(f  1 e 3 0 ]
+"86 C:\Program Files\Microchip\xc8\v1.44\sources\common\ftadd.c
+[v ___ftadd __ftadd `(f  1 e 3 0 ]
+"6 C:\Program Files\Microchip\xc8\v1.44\sources\pic\eeprom.c
+[v _eecpymem eecpymem `(v  1 e 1 0 ]
+"39
+[v _memcpyee memcpyee `(v  1 e 1 0 ]
+"39 C:\Users\admin\Desktop\joshipro\slidedoor.X\slide.c
+[v _main main `(v  1 e 1 0 ]
+"57 C:\Program Files\Microchip\xc8\v1.44\include\pic16f883.h
+[v _TMR0 TMR0 `VEuc  1 e 1 @1 ]
+"164
+[v _PORTA PORTA `VEuc  1 e 1 @5 ]
+"288
+[v _PORTC PORTC `VEuc  1 e 1 @7 ]
+"1265
+[v _OPTION_REG OPTION_REG `VEuc  1 e 1 @129 ]
+"1335
+[v _TRISA TRISA `VEuc  1 e 1 @133 ]
+"1397
+[v _TRISB TRISB `VEuc  1 e 1 @134 ]
+"1459
+[v _TRISC TRISC `VEuc  1 e 1 @135 ]
+"1702
+[v _OSCCON OSCCON `VEuc  1 e 1 @143 ]
+"2186
+[v _WPUB WPUB `VEuc  1 e 1 @149 ]
+"2256
+[v _IOCB IOCB `VEuc  1 e 1 @150 ]
+"3227
+[v _ANSEL ANSEL `VEuc  1 e 1 @392 ]
+"3271
+[v _ANSELH ANSELH `VEuc  1 e 1 @393 ]
+"3726
+[v _RA3 RA3 `VEb  1 e 0 @43 ]
+"3732
+[v _RA6 RA6 `VEb  1 e 0 @46 ]
+"3734
+[v _RA7 RA7 `VEb  1 e 0 @47 ]
+"3744
+[v _RB4 RB4 `VEb  1 e 0 @52 ]
+"3746
+[v _RB5 RB5 `VEb  1 e 0 @53 ]
+"3748
+[v _RB6 RB6 `VEb  1 e 0 @54 ]
+"3750
+[v _RB7 RB7 `VEb  1 e 0 @55 ]
+"3756
+[v _RC0 RC0 `VEb  1 e 0 @56 ]
+"3758
+[v _RC1 RC1 `VEb  1 e 0 @57 ]
+"3768
+[v _RC6 RC6 `VEb  1 e 0 @62 ]
+"3770
+[v _RC7 RC7 `VEb  1 e 0 @63 ]
+"3860
+[v _T0IF T0IF `VEb  1 e 0 @90 ]
+"36 C:\Users\admin\Desktop\joshipro\slidedoor.X\slide.c
+[v _count count `i  1 e 2 0 ]
+"39
+[v _main main `(v  1 e 1 0 ]
+{
+"343
+} 0

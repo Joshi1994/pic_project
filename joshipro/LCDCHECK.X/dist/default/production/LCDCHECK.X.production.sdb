@@ -1,0 +1,135 @@
+[p LITE_MODE AUTOSTATIC PIC14 PICREGULAR PICMID ]
+[d version 1.1 ]
+[d edition pro ]
+[d chip 16F767 ]
+[d frameptr 6 ]
+"62 C:\Program Files\Microchip\xc8\v1.44\sources\common\float.c
+[v ___ftpack __ftpack `(f  1 e 3 0 ]
+"86 C:\Program Files\Microchip\xc8\v1.44\sources\common\ftadd.c
+[v ___ftadd __ftadd `(f  1 e 3 0 ]
+"14 C:\Users\admin\Desktop\joshipro\LCDCHECK.X\lcd.h
+[v _Lcd8_Port Lcd8_Port `(v  1 e 1 0 ]
+"56
+[v _Lcd8_Cmd Lcd8_Cmd `(v  1 e 1 0 ]
+"65
+[v _Lcd8_Clear Lcd8_Clear `(i  1 e 2 0 ]
+"70
+[v _Lcd8_Set_Cursor Lcd8_Set_Cursor `(v  1 e 1 0 ]
+"78
+[v _Lcd8_Init Lcd8_Init `(v  1 e 1 0 ]
+"96
+[v _Lcd8_Write_Char Lcd8_Write_Char `(v  1 e 1 0 ]
+"105
+[v _Lcd8_Write_String Lcd8_Write_String `(v  1 e 1 0 ]
+"112
+[v _Lcd8_Shift_Right Lcd8_Shift_Right `(v  1 e 1 0 ]
+"117
+[v _Lcd8_Shift_Left Lcd8_Shift_Left `(v  1 e 1 0 ]
+"125
+[v _Lcd4_Port Lcd4_Port `(v  1 e 1 0 ]
+"147
+[v _Lcd4_Cmd Lcd4_Cmd `(v  1 e 1 0 ]
+"202
+[v _Lcd4_Write_Char Lcd4_Write_Char `(v  1 e 1 0 ]
+"20 C:\Users\admin\Desktop\joshipro\LCDCHECK.X\LCDCHECK.c
+[v _main main `(v  1 e 1 0 ]
+"1359 C:\Program Files\Microchip\xc8\v1.44\include\pic16f767.h
+[v _TRISB TRISB `VEuc  1 e 1 @134 ]
+"1421
+[v _TRISC TRISC `VEuc  1 e 1 @135 ]
+"2893
+[v _RB6 RB6 `VEb  1 e 0 @54 ]
+"2895
+[v _RB7 RB7 `VEb  1 e 0 @55 ]
+"2901
+[v _RC0 RC0 `VEb  1 e 0 @56 ]
+"2903
+[v _RC1 RC1 `VEb  1 e 0 @57 ]
+"2905
+[v _RC2 RC2 `VEb  1 e 0 @58 ]
+"2907
+[v _RC3 RC3 `VEb  1 e 0 @59 ]
+"2909
+[v _RC4 RC4 `VEb  1 e 0 @60 ]
+"2911
+[v _RC5 RC5 `VEb  1 e 0 @61 ]
+"2913
+[v _RC6 RC6 `VEb  1 e 0 @62 ]
+"2915
+[v _RC7 RC7 `VEb  1 e 0 @63 ]
+"20 C:\Users\admin\Desktop\joshipro\LCDCHECK.X\LCDCHECK.c
+[v _main main `(v  1 e 1 0 ]
+{
+"22
+[v main@i i `i  1 a 2 10 ]
+"46
+} 0
+"105 C:\Users\admin\Desktop\joshipro\LCDCHECK.X\lcd.h
+[v _Lcd8_Write_String Lcd8_Write_String `(v  1 e 1 0 ]
+{
+[v Lcd8_Write_String@a a `*.24uc  1 a 1 wreg ]
+"107
+[v Lcd8_Write_String@i i `i  1 a 2 4 ]
+"105
+[v Lcd8_Write_String@a a `*.24uc  1 a 1 wreg ]
+"108
+[v Lcd8_Write_String@a a `*.24uc  1 a 1 6 ]
+"110
+} 0
+"96
+[v _Lcd8_Write_Char Lcd8_Write_Char `(v  1 e 1 0 ]
+{
+[v Lcd8_Write_Char@a a `uc  1 a 1 wreg ]
+[v Lcd8_Write_Char@a a `uc  1 a 1 wreg ]
+"98
+[v Lcd8_Write_Char@a a `uc  1 a 1 3 ]
+"103
+} 0
+"112
+[v _Lcd8_Shift_Right Lcd8_Shift_Right `(v  1 e 1 0 ]
+{
+"115
+} 0
+"117
+[v _Lcd8_Shift_Left Lcd8_Shift_Left `(v  1 e 1 0 ]
+{
+"120
+} 0
+"70
+[v _Lcd8_Set_Cursor Lcd8_Set_Cursor `(v  1 e 1 0 ]
+{
+[v Lcd8_Set_Cursor@a a `uc  1 a 1 wreg ]
+[v Lcd8_Set_Cursor@a a `uc  1 a 1 wreg ]
+[v Lcd8_Set_Cursor@b b `uc  1 p 1 4 ]
+"72
+[v Lcd8_Set_Cursor@a a `uc  1 a 1 5 ]
+"76
+} 0
+"78
+[v _Lcd8_Init Lcd8_Init `(v  1 e 1 0 ]
+{
+"94
+} 0
+"65
+[v _Lcd8_Clear Lcd8_Clear `(i  1 e 2 0 ]
+{
+"68
+} 0
+"56
+[v _Lcd8_Cmd Lcd8_Cmd `(v  1 e 1 0 ]
+{
+[v Lcd8_Cmd@a a `uc  1 a 1 wreg ]
+[v Lcd8_Cmd@a a `uc  1 a 1 wreg ]
+"58
+[v Lcd8_Cmd@a a `uc  1 a 1 3 ]
+"63
+} 0
+"14
+[v _Lcd8_Port Lcd8_Port `(v  1 e 1 0 ]
+{
+[v Lcd8_Port@a a `uc  1 a 1 wreg ]
+[v Lcd8_Port@a a `uc  1 a 1 wreg ]
+"16
+[v Lcd8_Port@a a `uc  1 a 1 0 ]
+"55
+} 0

@@ -1,0 +1,134 @@
+[p LITE_MODE AUTOSTATIC PIC14 PICREGULAR PICMID ]
+[d version 1.1 ]
+[d edition pro ]
+[d chip 16F883 ]
+[d frameptr 6 ]
+"62 C:\Program Files\Microchip\xc8\v1.44\sources\common\float.c
+[v ___ftpack __ftpack `(f  1 e 3 0 ]
+"86 C:\Program Files\Microchip\xc8\v1.44\sources\common\ftadd.c
+[v ___ftadd __ftadd `(f  1 e 3 0 ]
+"6 C:\Program Files\Microchip\xc8\v1.44\sources\pic\eeprom.c
+[v _eecpymem eecpymem `(v  1 e 1 0 ]
+"39
+[v _memcpyee memcpyee `(v  1 e 1 0 ]
+"89 C:\Users\admin\Desktop\joshipro\883sam.X\newmain.c
+[v _PORT_Config PORT_Config `(v  1 e 1 0 ]
+"108
+[v _ToggleEpinOfLCD ToggleEpinOfLCD `(v  1 e 1 0 ]
+"117
+[v _LCD_CmdWrite LCD_CmdWrite `(v  1 e 1 0 ]
+"132
+[v _LCD_DataWrite LCD_DataWrite `(v  1 e 1 0 ]
+"147
+[v _LCD_Init LCD_Init `(v  1 e 1 0 ]
+"172
+[v _LCD_DisplayString LCD_DisplayString `(v  1 e 1 0 ]
+"179
+[v _LCD_Clear LCD_Clear `(v  1 e 1 0 ]
+"186
+[v _main main `(v  1 e 1 0 ]
+"164 C:\Program Files\Microchip\xc8\v1.44\include\pic16f883.h
+[v _PORTA PORTA `VEuc  1 e 1 @5 ]
+"226
+[v _PORTB PORTB `VEuc  1 e 1 @6 ]
+"288
+[v _PORTC PORTC `VEuc  1 e 1 @7 ]
+"350
+[v _PORTE PORTE `VEuc  1 e 1 @9 ]
+"378
+[v _INTCON INTCON `VEuc  1 e 1 @11 ]
+"1265
+[v _OPTION_REG OPTION_REG `VEuc  1 e 1 @129 ]
+"1335
+[v _TRISA TRISA `VEuc  1 e 1 @133 ]
+"1397
+[v _TRISB TRISB `VEuc  1 e 1 @134 ]
+"1459
+[v _TRISC TRISC `VEuc  1 e 1 @135 ]
+"1521
+[v _TRISE TRISE `VEuc  1 e 1 @137 ]
+"1702
+[v _OSCCON OSCCON `VEuc  1 e 1 @143 ]
+"2186
+[v _WPUB WPUB `VEuc  1 e 1 @149 ]
+"2256
+[v _IOCB IOCB `VEuc  1 e 1 @150 ]
+"3227
+[v _ANSEL ANSEL `VEuc  1 e 1 @392 ]
+"3271
+[v _ANSELH ANSELH `VEuc  1 e 1 @393 ]
+"3736
+[v _RB0 RB0 `VEb  1 e 0 @48 ]
+"3738
+[v _RB1 RB1 `VEb  1 e 0 @49 ]
+"3740
+[v _RB2 RB2 `VEb  1 e 0 @50 ]
+"3742
+[v _RB3 RB3 `VEb  1 e 0 @51 ]
+"3764
+[v _RC4 RC4 `VEb  1 e 0 @60 ]
+"3766
+[v _RC5 RC5 `VEb  1 e 0 @61 ]
+"3928
+[v _TRISB0 TRISB0 `VEb  1 e 0 @1072 ]
+"3930
+[v _TRISB1 TRISB1 `VEb  1 e 0 @1073 ]
+"3932
+[v _TRISB2 TRISB2 `VEb  1 e 0 @1074 ]
+"3934
+[v _TRISB3 TRISB3 `VEb  1 e 0 @1075 ]
+"3956
+[v _TRISC6 TRISC6 `VEb  1 e 0 @1086 ]
+"3958
+[v _TRISC7 TRISC7 `VEb  1 e 0 @1087 ]
+"186 C:\Users\admin\Desktop\joshipro\883sam.X\newmain.c
+[v _main main `(v  1 e 1 0 ]
+{
+"204
+} 0
+"89
+[v _PORT_Config PORT_Config `(v  1 e 1 0 ]
+{
+"106
+} 0
+"147
+[v _LCD_Init LCD_Init `(v  1 e 1 0 ]
+{
+"169
+} 0
+"172
+[v _LCD_DisplayString LCD_DisplayString `(v  1 e 1 0 ]
+{
+[v LCD_DisplayString@s s `*.24DCuc  1 a 1 wreg ]
+[v LCD_DisplayString@s s `*.24DCuc  1 a 1 wreg ]
+[v LCD_DisplayString@s s `*.24DCuc  1 a 1 4 ]
+"176
+} 0
+"132
+[v _LCD_DataWrite LCD_DataWrite `(v  1 e 1 0 ]
+{
+[v LCD_DataWrite@LCDChar LCDChar `uc  1 a 1 wreg ]
+[v LCD_DataWrite@LCDChar LCDChar `uc  1 a 1 wreg ]
+"134
+[v LCD_DataWrite@LCDChar LCDChar `uc  1 a 1 2 ]
+"144
+} 0
+"179
+[v _LCD_Clear LCD_Clear `(v  1 e 1 0 ]
+{
+"183
+} 0
+"117
+[v _LCD_CmdWrite LCD_CmdWrite `(v  1 e 1 0 ]
+{
+[v LCD_CmdWrite@Command Command `uc  1 a 1 wreg ]
+[v LCD_CmdWrite@Command Command `uc  1 a 1 wreg ]
+"119
+[v LCD_CmdWrite@Command Command `uc  1 a 1 2 ]
+"130
+} 0
+"108
+[v _ToggleEpinOfLCD ToggleEpinOfLCD `(v  1 e 1 0 ]
+{
+"114
+} 0

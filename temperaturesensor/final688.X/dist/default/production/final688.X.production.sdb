@@ -1,0 +1,247 @@
+[p LITE_MODE AUTOSTATIC PIC14 PICREGULAR PICMID ]
+[d version 1.1 ]
+[d edition pro ]
+[d chip 16F688 ]
+[d frameptr 6 ]
+"6 C:\Program Files\Microchip\xc8\v1.44\sources\common\awdiv.c
+[v ___awdiv __awdiv `(i  1 e 2 0 ]
+"6 C:\Program Files\Microchip\xc8\v1.44\sources\common\awmod.c
+[v ___awmod __awmod `(i  1 e 2 0 ]
+"62 C:\Program Files\Microchip\xc8\v1.44\sources\common\float.c
+[v ___ftpack __ftpack `(f  1 e 3 0 ]
+"86 C:\Program Files\Microchip\xc8\v1.44\sources\common\ftadd.c
+[v ___ftadd __ftadd `(f  1 e 3 0 ]
+"6 C:\Program Files\Microchip\xc8\v1.44\sources\pic\eeprom.c
+[v _eecpymem eecpymem `(v  1 e 1 0 ]
+"39
+[v _memcpyee memcpyee `(v  1 e 1 0 ]
+"43 C:\Users\admin\Desktop\joshipro\temperaturesensor\final688.X\newmain.c
+[v _Lcd_Port Lcd_Port `(v  1 e 1 0 ]
+"65
+[v _Lcd_Cmd Lcd_Cmd `(v  1 e 1 0 ]
+"74
+[v _Lcd_Clear Lcd_Clear `(v  1 e 1 0 ]
+"80
+[v _Lcd_Set_Cursor Lcd_Set_Cursor `(v  1 e 1 0 ]
+"101
+[v _Lcd_Init Lcd_Init `(v  1 e 1 0 ]
+"120
+[v _Lcd_Write_Char Lcd_Write_Char `(v  1 e 1 0 ]
+"136
+[v _Lcd_Write_String Lcd_Write_String `(v  1 e 1 0 ]
+"147
+[v _reset reset `(uc  1 e 1 0 ]
+"169
+[v _write write `(v  1 e 1 0 ]
+"199
+[v _read read `(uc  1 e 1 0 ]
+"217
+[v _checktemp checktemp `(i  1 e 2 0 ]
+"241
+[v _lcddisplay lcddisplay `(v  1 e 1 0 ]
+"263
+[v _main main `(i  1 e 2 0 ]
+"794 C:\Program Files\Microchip\xc8\v1.44\include\pic16f688.h
+[v _CMCON0 CMCON0 `VEuc  1 e 1 @25 ]
+"1107
+[v _TRISC TRISC `VEuc  1 e 1 @135 ]
+"1391
+[v _ANSEL ANSEL `VEuc  1 e 1 @145 ]
+"2162
+[v _RA0 RA0 `VEb  1 e 0 @40 ]
+"2164
+[v _RA1 RA1 `VEb  1 e 0 @41 ]
+"2166
+[v _RA2 RA2 `VEb  1 e 0 @42 ]
+"2168
+[v _RA3 RA3 `VEb  1 e 0 @43 ]
+"2170
+[v _RA4 RA4 `VEb  1 e 0 @44 ]
+"2172
+[v _RA5 RA5 `VEb  1 e 0 @45 ]
+"2178
+[v _RC0 RC0 `VEb  1 e 0 @56 ]
+"2180
+[v _RC1 RC1 `VEb  1 e 0 @57 ]
+"2182
+[v _RC2 RC2 `VEb  1 e 0 @58 ]
+"2184
+[v _RC3 RC3 `VEb  1 e 0 @59 ]
+"2186
+[v _RC4 RC4 `VEb  1 e 0 @60 ]
+"2188
+[v _RC5 RC5 `VEb  1 e 0 @61 ]
+"2258
+[v _TRISA0 TRISA0 `VEb  1 e 0 @1064 ]
+"2260
+[v _TRISA1 TRISA1 `VEb  1 e 0 @1065 ]
+"2262
+[v _TRISA2 TRISA2 `VEb  1 e 0 @1066 ]
+"2264
+[v _TRISA3 TRISA3 `VEb  1 e 0 @1067 ]
+"2266
+[v _TRISA4 TRISA4 `VEb  1 e 0 @1068 ]
+"2268
+[v _TRISA5 TRISA5 `VEb  1 e 0 @1069 ]
+"263 C:\Users\admin\Desktop\joshipro\temperaturesensor\final688.X\newmain.c
+[v _main main `(i  1 e 2 0 ]
+{
+"436
+[v main@der der `i  1 a 2 17 ]
+"312
+[v main@c_115 c `i  1 a 2 11 ]
+"274
+[v main@lowval lowval `i  1 a 2 25 ]
+"273
+[v main@highval highval `i  1 a 2 23 ]
+"281
+[v main@switchsel switchsel `i  1 a 2 21 ]
+"277
+[v main@tempval tempval `i  1 a 2 19 ]
+"280
+[v main@curs curs `i  1 a 2 15 ]
+"284
+[v main@c c `i  1 a 2 13 ]
+"276
+[v main@b b `i  1 a 2 9 ]
+"271
+[v main@temp temp `ui  1 a 2 7 ]
+"270
+[v main@tempH tempH `us  1 a 2 5 ]
+[v main@tempL tempL `us  1 a 2 3 ]
+"574
+} 0
+"241
+[v _lcddisplay lcddisplay `(v  1 e 1 0 ]
+{
+[v lcddisplay@data data `i  1 p 2 9 ]
+"245
+} 0
+"6 C:\Program Files\Microchip\xc8\v1.44\sources\common\awmod.c
+[v ___awmod __awmod `(i  1 e 2 0 ]
+{
+"11
+[v ___awmod@sign sign `uc  1 a 1 6 ]
+[v ___awmod@counter counter `uc  1 a 1 5 ]
+"6
+[v ___awmod@divisor divisor `i  1 p 2 0 ]
+[v ___awmod@dividend dividend `i  1 p 2 2 ]
+"35
+} 0
+"6 C:\Program Files\Microchip\xc8\v1.44\sources\common\awdiv.c
+[v ___awdiv __awdiv `(i  1 e 2 0 ]
+{
+"11
+[v ___awdiv@quotient quotient `i  1 a 2 7 ]
+"12
+[v ___awdiv@sign sign `uc  1 a 1 6 ]
+[v ___awdiv@counter counter `uc  1 a 1 5 ]
+"6
+[v ___awdiv@divisor divisor `i  1 p 2 0 ]
+[v ___awdiv@dividend dividend `i  1 p 2 2 ]
+"42
+} 0
+"217 C:\Users\admin\Desktop\joshipro\temperaturesensor\final688.X\newmain.c
+[v _checktemp checktemp `(i  1 e 2 0 ]
+{
+"220
+[v checktemp@temp temp `ui  1 a 2 12 ]
+"219
+[v checktemp@tempH tempH `us  1 a 2 10 ]
+[v checktemp@tempL tempL `us  1 a 2 8 ]
+"238
+} 0
+"169
+[v _write write `(v  1 e 1 0 ]
+{
+[v write@WRT WRT `uc  1 a 1 wreg ]
+"171
+[v write@i i `uc  1 a 1 3 ]
+[v write@Cmd Cmd `uc  1 a 1 2 ]
+"169
+[v write@WRT WRT `uc  1 a 1 wreg ]
+"172
+[v write@WRT WRT `uc  1 a 1 1 ]
+"195
+} 0
+"147
+[v _reset reset `(uc  1 e 1 0 ]
+{
+"165
+} 0
+"199
+[v _read read `(uc  1 e 1 0 ]
+{
+"201
+[v read@i i `uc  1 a 1 3 ]
+[v read@result result `uc  1 a 1 2 ]
+"214
+} 0
+"136
+[v _Lcd_Write_String Lcd_Write_String `(v  1 e 1 0 ]
+{
+[v Lcd_Write_String@a a `*.24DCuc  1 a 1 wreg ]
+"140
+[v Lcd_Write_String@i i `i  1 a 2 5 ]
+"136
+[v Lcd_Write_String@a a `*.24DCuc  1 a 1 wreg ]
+"141
+[v Lcd_Write_String@a a `*.24DCuc  1 a 1 7 ]
+"145
+} 0
+"120
+[v _Lcd_Write_Char Lcd_Write_Char `(v  1 e 1 0 ]
+{
+[v Lcd_Write_Char@a a `uc  1 a 1 wreg ]
+"122
+[v Lcd_Write_Char@y y `uc  1 a 1 3 ]
+[v Lcd_Write_Char@temp temp `uc  1 a 1 2 ]
+"120
+[v Lcd_Write_Char@a a `uc  1 a 1 wreg ]
+"123
+[v Lcd_Write_Char@a a `uc  1 a 1 4 ]
+"134
+} 0
+"80
+[v _Lcd_Set_Cursor Lcd_Set_Cursor `(v  1 e 1 0 ]
+{
+[v Lcd_Set_Cursor@a a `uc  1 a 1 wreg ]
+"82
+[v Lcd_Set_Cursor@temp temp `uc  1 a 1 10 ]
+[v Lcd_Set_Cursor@y y `uc  1 a 1 9 ]
+[v Lcd_Set_Cursor@z z `uc  1 a 1 8 ]
+"80
+[v Lcd_Set_Cursor@a a `uc  1 a 1 wreg ]
+[v Lcd_Set_Cursor@b b `uc  1 p 1 4 ]
+"83
+[v Lcd_Set_Cursor@a a `uc  1 a 1 7 ]
+"99
+} 0
+"101
+[v _Lcd_Init Lcd_Init `(v  1 e 1 0 ]
+{
+"118
+} 0
+"74
+[v _Lcd_Clear Lcd_Clear `(v  1 e 1 0 ]
+{
+"78
+} 0
+"65
+[v _Lcd_Cmd Lcd_Cmd `(v  1 e 1 0 ]
+{
+[v Lcd_Cmd@a a `uc  1 a 1 wreg ]
+[v Lcd_Cmd@a a `uc  1 a 1 wreg ]
+"67
+[v Lcd_Cmd@a a `uc  1 a 1 3 ]
+"72
+} 0
+"43
+[v _Lcd_Port Lcd_Port `(v  1 e 1 0 ]
+{
+[v Lcd_Port@a a `uc  1 a 1 wreg ]
+[v Lcd_Port@a a `uc  1 a 1 wreg ]
+"45
+[v Lcd_Port@a a `uc  1 a 1 0 ]
+"64
+} 0

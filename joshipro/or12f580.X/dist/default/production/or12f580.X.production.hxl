@@ -1,0 +1,26 @@
+### HEXMate logfile and output summary ###
+### Memory Usage ###
+ Unused memory ranges:
+  6h - 3F7h
+  3FEh - 1FFDh
+  
+ dist/default/production\or12f580.X.production.hex ranges:
+  0h - 5h
+  3F8h - 3FDh
+  1FFEh - 1FFFh
+  
+### Hex Memory Map ###
+ Legend:
+  - = Unused memory
+  F = Filled ROM
+  S = Stored serial code
+  A = Stored ASCII string
+  R = Reserved for checksum
+  C = Stored checksum result
+  T = Trailing code
+  & = Find & replace opcode
+  X = Find & delete opcode
+  1 = dist/default/production\or12f580.X.production.hex
+00000000: 111111----------------------------------------------------------
+000003C0: --------------------------------------------------------111111--
+00001FC0: --------------------------------------------------------------11

@@ -1,0 +1,1728 @@
+
+
+Microchip Technology PIC LITE Macro Assembler V1.44 build -154322312 
+                                                                                               Thu Dec 14 15:55:21 2017
+
+Microchip Technology Omniscient Code Generator v1.44 (Free mode) build 201709140600
+     1                           	processor	16F883
+     2                           	opt	pw 120
+     3                           	opt	lm
+     4                           	psect	cinit,global,class=CODE,merge=1,delta=2
+     5                           	psect	bssCOMMON,global,class=COMMON,space=1,delta=1
+     6                           	psect	cstackCOMMON,global,class=COMMON,space=1,delta=1
+     7                           	psect	maintext,global,class=CODE,split=1,delta=2
+     8                           	dabs	1,0x7E,2
+     9  0000                     
+    10                           ; Version 1.44
+    11                           ; Generated 14/09/2017 GMT
+    12                           ; 
+    13                           ; Copyright © 2017, Microchip Technology Inc. and its subsidiaries ("Microchip")
+    14                           ; All rights reserved.
+    15                           ; 
+    16                           ; This software is developed by Microchip Technology Inc. and its subsidiaries ("Microch
+      +                          ip").
+    17                           ; 
+    18                           ; Redistribution and use in source and binary forms, with or without modification, are
+    19                           ; permitted provided that the following conditions are met:
+    20                           ; 
+    21                           ;     1. Redistributions of source code must retain the above copyright notice, this lis
+      +                          t of
+    22                           ;        conditions and the following disclaimer.
+    23                           ; 
+    24                           ;     2. Redistributions in binary form must reproduce the above copyright notice, this 
+      +                          list
+    25                           ;        of conditions and the following disclaimer in the documentation and/or other
+    26                           ;        materials provided with the distribution.
+    27                           ; 
+    28                           ;     3. Microchip's name may not be used to endorse or promote products derived from th
+      +                          is
+    29                           ;        software without specific prior written permission.
+    30                           ; 
+    31                           ; THIS SOFTWARE IS PROVIDED BY MICROCHIP "AS IS" AND ANY EXPRESS OR IMPLIED WARRANTIES,
+    32                           ; INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS F
+      +                          OR
+    33                           ; PURPOSE ARE DISCLAIMED.  IN NO EVENT SHALL MICROCHIP BE LIABLE FOR ANY DIRECT, INDIREC
+      +                          T,
+    34                           ; INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING BUT NOT LIMITED TO
+    35                           ; PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA OR PROFITS; OR BUSINESS
+    36                           ; INTERRUPTION) HOWSOEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, ST
+      +                          RICT
+    37                           ; LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE U
+      +                          SE OF
+    38                           ; THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+    39                           ; 
+    40                           ; 
+    41                           ; Code-generator required, PIC16F883 Definitions
+    42                           ; 
+    43                           ; SFR Addresses
+    44  0000                     	;# 
+    45  0001                     	;# 
+    46  0002                     	;# 
+    47  0003                     	;# 
+    48  0004                     	;# 
+    49  0005                     	;# 
+    50  0006                     	;# 
+    51  0007                     	;# 
+    52  0009                     	;# 
+    53  000A                     	;# 
+    54  000B                     	;# 
+    55  000C                     	;# 
+    56  000D                     	;# 
+    57  000E                     	;# 
+    58  000E                     	;# 
+    59  000F                     	;# 
+    60  0010                     	;# 
+    61  0011                     	;# 
+    62  0012                     	;# 
+    63  0013                     	;# 
+    64  0014                     	;# 
+    65  0015                     	;# 
+    66  0015                     	;# 
+    67  0016                     	;# 
+    68  0017                     	;# 
+    69  0018                     	;# 
+    70  0019                     	;# 
+    71  001A                     	;# 
+    72  001B                     	;# 
+    73  001B                     	;# 
+    74  001C                     	;# 
+    75  001D                     	;# 
+    76  001E                     	;# 
+    77  001F                     	;# 
+    78  0081                     	;# 
+    79  0085                     	;# 
+    80  0086                     	;# 
+    81  0087                     	;# 
+    82  0089                     	;# 
+    83  008C                     	;# 
+    84  008D                     	;# 
+    85  008E                     	;# 
+    86  008F                     	;# 
+    87  0090                     	;# 
+    88  0091                     	;# 
+    89  0092                     	;# 
+    90  0093                     	;# 
+    91  0093                     	;# 
+    92  0093                     	;# 
+    93  0094                     	;# 
+    94  0095                     	;# 
+    95  0096                     	;# 
+    96  0097                     	;# 
+    97  0098                     	;# 
+    98  0099                     	;# 
+    99  009A                     	;# 
+   100  009B                     	;# 
+   101  009C                     	;# 
+   102  009D                     	;# 
+   103  009E                     	;# 
+   104  009F                     	;# 
+   105  0105                     	;# 
+   106  0107                     	;# 
+   107  0108                     	;# 
+   108  0109                     	;# 
+   109  010C                     	;# 
+   110  010C                     	;# 
+   111  010D                     	;# 
+   112  010E                     	;# 
+   113  010F                     	;# 
+   114  0185                     	;# 
+   115  0187                     	;# 
+   116  0188                     	;# 
+   117  0189                     	;# 
+   118  018C                     	;# 
+   119  018D                     	;# 
+   120  0007                     _PORTC	set	7
+   121  0005                     _PORTA	set	5
+   122  0001                     _TMR0	set	1
+   123  0037                     _RB7	set	55
+   124  005A                     _T0IF	set	90
+   125  0036                     _RB6	set	54
+   126  003F                     _RC7	set	63
+   127  003E                     _RC6	set	62
+   128  002B                     _RA3	set	43
+   129  0035                     _RB5	set	53
+   130  0034                     _RB4	set	52
+   131  002F                     _RA7	set	47
+   132  002E                     _RA6	set	46
+   133  0038                     _RC0	set	56
+   134  0039                     _RC1	set	57
+   135  0081                     _OPTION_REG	set	129
+   136  008F                     _OSCCON	set	143
+   137  0096                     _IOCB	set	150
+   138  0095                     _WPUB	set	149
+   139  0087                     _TRISC	set	135
+   140  0086                     _TRISB	set	134
+   141  0085                     _TRISA	set	133
+   142  0189                     _ANSELH	set	393
+   143  0188                     _ANSEL	set	392
+   144                           
+   145                           ; #config settings
+   146  0000                     
+   147                           	psect	cinit
+   148  07F9                     start_initialization:	
+   149  07F9                     __initialization:	
+   150                           
+   151                           ; Clear objects allocated to COMMON
+   152  07F9  01F0               	clrf	__pbssCOMMON& (0+127)
+   153  07FA  01F1               	clrf	(__pbssCOMMON+1)& (0+127)
+   154  07FB  01F2               	clrf	(__pbssCOMMON+2)& (0+127)
+   155  07FC  01F3               	clrf	(__pbssCOMMON+3)& (0+127)
+   156  07FD                     end_of_initialization:	
+   157                           ;End of C runtime variable initialization code
+   158                           
+   159  07FD                     __end_of__initialization:	
+   160  07FD  0183               	clrf	3
+   161  07FE  118A  2CCB         	ljmp	_main	;jump to C main() function
+   162                           
+   163                           	psect	bssCOMMON
+   164  0070                     __pbssCOMMON:	
+   165  0070                     _i:	
+   166  0070                     	ds	2
+   167  0072                     _count:	
+   168  0072                     	ds	2
+   169                           
+   170                           	psect	cstackCOMMON
+   171  0074                     __pcstackCOMMON:	
+   172  0074                     ?_main:	
+   173  0074                     ??_main:	
+   174                           ; 1 bytes @ 0x0
+   175                           
+   176                           
+   177                           ; 1 bytes @ 0x0
+   178  0074                     	ds	3
+   179                           
+   180                           	psect	maintext
+   181  04CB                     __pmaintext:	
+   182 ;;
+   183 ;;Main: autosize = 0, tempsize = 3, incstack = 0, save=0
+   184 ;;
+   185 ;; *************** function _main *****************
+   186 ;; Defined at:
+   187 ;;		line 39 in file "slide.c"
+   188 ;; Parameters:    Size  Location     Type
+   189 ;;		None
+   190 ;; Auto vars:     Size  Location     Type
+   191 ;;		None
+   192 ;; Return value:  Size  Location     Type
+   193 ;;                  1    wreg      void 
+   194 ;; Registers used:
+   195 ;;		wreg, status,2, btemp+1
+   196 ;; Tracked objects:
+   197 ;;		On entry : B00/0
+   198 ;;		On exit  : 0/0
+   199 ;;		Unchanged: 0/0
+   200 ;; Data sizes:     COMMON   BANK0   BANK1   BANK2
+   201 ;;      Params:         0       0       0       0
+   202 ;;      Locals:         0       0       0       0
+   203 ;;      Temps:          3       0       0       0
+   204 ;;      Totals:         3       0       0       0
+   205 ;;Total ram usage:        3 bytes
+   206 ;; This function calls:
+   207 ;;		Nothing
+   208 ;; This function is called by:
+   209 ;;		Startup code after reset
+   210 ;; This function uses a non-reentrant model
+   211 ;;
+   212                           
+   213                           
+   214                           ;psect for function _main
+   215  04CB                     _main:	
+   216                           
+   217                           ;slide.c: 41: TRISA = 0x00;
+   218                           
+   219                           ;incstack = 0
+   220                           ; Regs used in _main: [wreg+status,2+btemp+1]
+   221  04CB  1683               	bsf	3,5	;RP0=1, select bank1
+   222  04CC  1303               	bcf	3,6	;RP1=0, select bank1
+   223  04CD  0185               	clrf	5	;volatile
+   224                           
+   225                           ;slide.c: 42: TRISB = 0xFF;
+   226  04CE  30FF               	movlw	255
+   227  04CF  0086               	movwf	6	;volatile
+   228                           
+   229                           ;slide.c: 43: TRISC = 0x00;
+   230  04D0  0187               	clrf	7	;volatile
+   231                           
+   232                           ;slide.c: 45: ANSEL = 0x00;
+   233  04D1  1683               	bsf	3,5	;RP0=1, select bank3
+   234  04D2  1703               	bsf	3,6	;RP1=1, select bank3
+   235  04D3  0188               	clrf	8	;volatile
+   236                           
+   237                           ;slide.c: 46: ANSELH = 0X00;
+   238  04D4  0189               	clrf	9	;volatile
+   239                           
+   240                           ;slide.c: 47: WPUB = 0XFF;
+   241  04D5  30FF               	movlw	255
+   242  04D6  1683               	bsf	3,5	;RP0=1, select bank1
+   243  04D7  1303               	bcf	3,6	;RP1=0, select bank1
+   244  04D8  0095               	movwf	21	;volatile
+   245                           
+   246                           ;slide.c: 48: IOCB = 0X00;
+   247  04D9  0196               	clrf	22	;volatile
+   248                           
+   249                           ;slide.c: 49: OSCCON = 0X65;
+   250  04DA  3065               	movlw	101
+   251  04DB  008F               	movwf	15	;volatile
+   252                           
+   253                           ;slide.c: 50: OPTION_REG = 0x07;
+   254  04DC  3007               	movlw	7
+   255  04DD  0081               	movwf	1	;volatile
+   256                           
+   257                           ;slide.c: 52: TMR0 = 0;
+   258  04DE  1283               	bcf	3,5	;RP0=0, select bank0
+   259  04DF  1303               	bcf	3,6	;RP1=0, select bank0
+   260  04E0  0181               	clrf	1	;volatile
+   261                           
+   262                           ;slide.c: 53: PORTA = 0X00;
+   263  04E1  0185               	clrf	5	;volatile
+   264                           
+   265                           ;slide.c: 54: PORTC = 0X00;
+   266  04E2  0187               	clrf	7	;volatile
+   267  04E3  2FCC               	goto	l588
+   268  04E4                     l598:	
+   269  04E4  1A86               	btfsc	6,5	;volatile
+   270  04E5  2FD2               	goto	l60
+   271                           
+   272                           ;slide.c: 63: {
+   273                           ;slide.c: 65: RA3 = 0;
+   274  04E6  1185               	bcf	5,3	;volatile
+   275                           
+   276                           ;slide.c: 66: RC6 = 1;
+   277  04E7  1707               	bsf	7,6	;volatile
+   278                           
+   279                           ;slide.c: 67: RC7 = 0;
+   280  04E8  1387               	bcf	7,7	;volatile
+   281                           
+   282                           ;slide.c: 68: if(!RB6)
+   283  04E9  1B06               	btfsc	6,6	;volatile
+   284  04EA  2E5D               	goto	l61
+   285  04EB                     l62:	
+   286                           ;slide.c: 69: {
+   287                           ;slide.c: 70: while(!RB6);
+   288                           
+   289  04EB  1F06               	btfss	6,6	;volatile
+   290  04EC  2CEB               	goto	l62
+   291                           
+   292                           ;slide.c: 72: RC0 = 1;
+   293  04ED  1407               	bsf	7,0	;volatile
+   294                           
+   295                           ;slide.c: 73: RC1 = 0;
+   296  04EE  1087               	bcf	7,1	;volatile
+   297                           
+   298                           ;slide.c: 74: while(!RB4)
+   299  04EF  2D4E               	goto	l640
+   300  04F0                     l68:	
+   301                           ;slide.c: 88: break;
+   302                           
+   303                           
+   304                           ;slide.c: 89: }
+   305                           ;slide.c: 90: if(!RB7)
+   306  04F0  1283               	bcf	3,5	;RP0=0, select bank0
+   307  04F1  1303               	bcf	3,6	;RP1=0, select bank0
+   308  04F2  1B86               	btfsc	6,7	;volatile
+   309  04F3  2D4E               	goto	l640
+   310                           
+   311                           ;slide.c: 91: {
+   312                           ;slide.c: 92: RA3 = 1;
+   313  04F4  1585               	bsf	5,3	;volatile
+   314                           
+   315                           ;slide.c: 93: _delay((unsigned long)((90)*(4000000/4000.0)));
+   316  04F5  3075               	movlw	117
+   317  04F6  00F5               	movwf	??_main+1
+   318  04F7  30E1               	movlw	225
+   319  04F8  00F4               	movwf	??_main
+   320  04F9                     u307:	
+   321  04F9  0BF4               	decfsz	??_main,f
+   322  04FA  2CF9               	goto	u307
+   323  04FB  0BF5               	decfsz	??_main+1,f
+   324  04FC  2CF9               	goto	u307
+   325                           
+   326                           ;slide.c: 94: RA3 = 0;
+   327  04FD  1283               	bcf	3,5	;RP0=0, select bank0
+   328  04FE  1303               	bcf	3,6	;RP1=0, select bank0
+   329  04FF  1185               	bcf	5,3	;volatile
+   330                           
+   331                           ;slide.c: 95: _delay((unsigned long)((50)*(4000000/4000.0)));
+   332  0500  3041               	movlw	65
+   333  0501  00F5               	movwf	??_main+1
+   334  0502  30EE               	movlw	238
+   335  0503  00F4               	movwf	??_main
+   336  0504                     u317:	
+   337  0504  0BF4               	decfsz	??_main,f
+   338  0505  2D04               	goto	u317
+   339  0506  0BF5               	decfsz	??_main+1,f
+   340  0507  2D04               	goto	u317
+   341  0508  0000               	nop
+   342                           
+   343                           ;slide.c: 96: RA3 = 1;
+   344  0509  1283               	bcf	3,5	;RP0=0, select bank0
+   345  050A  1303               	bcf	3,6	;RP1=0, select bank0
+   346  050B  1585               	bsf	5,3	;volatile
+   347                           
+   348                           ;slide.c: 97: _delay((unsigned long)((90)*(4000000/4000.0)));
+   349  050C  3075               	movlw	117
+   350  050D  00F5               	movwf	??_main+1
+   351  050E  30E1               	movlw	225
+   352  050F  00F4               	movwf	??_main
+   353  0510                     u327:	
+   354  0510  0BF4               	decfsz	??_main,f
+   355  0511  2D10               	goto	u327
+   356  0512  0BF5               	decfsz	??_main+1,f
+   357  0513  2D10               	goto	u327
+   358                           
+   359                           ;slide.c: 98: RA3 = 0;
+   360  0514  1283               	bcf	3,5	;RP0=0, select bank0
+   361  0515  1303               	bcf	3,6	;RP1=0, select bank0
+   362  0516  1185               	bcf	5,3	;volatile
+   363                           
+   364                           ;slide.c: 99: _delay((unsigned long)((50)*(4000000/4000.0)));
+   365  0517  3041               	movlw	65
+   366  0518  00F5               	movwf	??_main+1
+   367  0519  30EE               	movlw	238
+   368  051A  00F4               	movwf	??_main
+   369  051B                     u337:	
+   370  051B  0BF4               	decfsz	??_main,f
+   371  051C  2D1B               	goto	u337
+   372  051D  0BF5               	decfsz	??_main+1,f
+   373  051E  2D1B               	goto	u337
+   374  051F  0000               	nop
+   375                           
+   376                           ;slide.c: 100: RA3 = 1;
+   377  0520  1283               	bcf	3,5	;RP0=0, select bank0
+   378  0521  1303               	bcf	3,6	;RP1=0, select bank0
+   379  0522  1585               	bsf	5,3	;volatile
+   380                           
+   381                           ;slide.c: 101: _delay((unsigned long)((90)*(4000000/4000.0)));
+   382  0523  3075               	movlw	117
+   383  0524  00F5               	movwf	??_main+1
+   384  0525  30E1               	movlw	225
+   385  0526  00F4               	movwf	??_main
+   386  0527                     u347:	
+   387  0527  0BF4               	decfsz	??_main,f
+   388  0528  2D27               	goto	u347
+   389  0529  0BF5               	decfsz	??_main+1,f
+   390  052A  2D27               	goto	u347
+   391                           
+   392                           ;slide.c: 102: RA3 = 0;
+   393  052B  1283               	bcf	3,5	;RP0=0, select bank0
+   394  052C  1303               	bcf	3,6	;RP1=0, select bank0
+   395  052D  1185               	bcf	5,3	;volatile
+   396                           
+   397                           ;slide.c: 103: _delay((unsigned long)((50)*(4000000/4000.0)));
+   398  052E  3041               	movlw	65
+   399  052F  00F5               	movwf	??_main+1
+   400  0530  30EE               	movlw	238
+   401  0531  00F4               	movwf	??_main
+   402  0532                     u357:	
+   403  0532  0BF4               	decfsz	??_main,f
+   404  0533  2D32               	goto	u357
+   405  0534  0BF5               	decfsz	??_main+1,f
+   406  0535  2D32               	goto	u357
+   407  0536  0000               	nop
+   408                           
+   409                           ;slide.c: 104: RA3 = 1;
+   410  0537  1283               	bcf	3,5	;RP0=0, select bank0
+   411  0538  1303               	bcf	3,6	;RP1=0, select bank0
+   412  0539  1585               	bsf	5,3	;volatile
+   413                           
+   414                           ;slide.c: 105: _delay((unsigned long)((90)*(4000000/4000.0)));
+   415  053A  3075               	movlw	117
+   416  053B  00F5               	movwf	??_main+1
+   417  053C  30E1               	movlw	225
+   418  053D  00F4               	movwf	??_main
+   419  053E                     u367:	
+   420  053E  0BF4               	decfsz	??_main,f
+   421  053F  2D3E               	goto	u367
+   422  0540  0BF5               	decfsz	??_main+1,f
+   423  0541  2D3E               	goto	u367
+   424                           
+   425                           ;slide.c: 106: RA3 = 0;
+   426  0542  1283               	bcf	3,5	;RP0=0, select bank0
+   427  0543  1303               	bcf	3,6	;RP1=0, select bank0
+   428  0544  1185               	bcf	5,3	;volatile
+   429                           
+   430                           ;slide.c: 107: _delay((unsigned long)((50)*(4000000/4000.0)));
+   431  0545  3041               	movlw	65
+   432  0546  00F5               	movwf	??_main+1
+   433  0547  30EE               	movlw	238
+   434  0548  00F4               	movwf	??_main
+   435  0549                     u377:	
+   436  0549  0BF4               	decfsz	??_main,f
+   437  054A  2D49               	goto	u377
+   438  054B  0BF5               	decfsz	??_main+1,f
+   439  054C  2D49               	goto	u377
+   440  054D  0000               	nop
+   441  054E                     l640:	
+   442  054E  1283               	bcf	3,5	;RP0=0, select bank0
+   443  054F  1303               	bcf	3,6	;RP1=0, select bank0
+   444  0550  1A06               	btfsc	6,4	;volatile
+   445  0551  2D7D               	goto	l69
+   446                           
+   447                           ;slide.c: 75: {
+   448                           ;slide.c: 76: if(T0IF)
+   449  0552  1D0B               	btfss	11,2	;volatile
+   450  0553  2D4E               	goto	l640
+   451                           
+   452                           ;slide.c: 77: {
+   453                           ;slide.c: 78: T0IF = 0;
+   454  0554  110B               	bcf	11,2	;volatile
+   455                           
+   456                           ;slide.c: 79: count++;
+   457  0555  3001               	movlw	1
+   458  0556  07F2               	addwf	_count,f
+   459  0557  1803               	skipnc
+   460  0558  0AF3               	incf	_count+1,f
+   461  0559  3000               	movlw	0
+   462  055A  07F3               	addwf	_count+1,f
+   463                           
+   464                           ;slide.c: 80: if(count>=900)
+   465  055B  0873               	movf	_count+1,w
+   466  055C  3A80               	xorlw	128
+   467  055D  00FF               	movwf	127
+   468  055E  3083               	movlw	131
+   469  055F  027F               	subwf	127,w
+   470  0560  1D03               	skipz
+   471  0561  2D64               	goto	u65
+   472  0562  3084               	movlw	132
+   473  0563  0272               	subwf	_count,w
+   474  0564                     u65:	
+   475  0564  1C03               	skipc
+   476  0565  2CF0               	goto	l68
+   477                           
+   478                           ;slide.c: 81: {
+   479                           ;slide.c: 82: count = 0;
+   480  0566  01F2               	clrf	_count
+   481  0567  01F3               	clrf	_count+1
+   482                           
+   483                           ;slide.c: 83: RA3 = 1;
+   484  0568  1283               	bcf	3,5	;RP0=0, select bank0
+   485  0569  1303               	bcf	3,6	;RP1=0, select bank0
+   486  056A  1585               	bsf	5,3	;volatile
+   487                           
+   488                           ;slide.c: 84: _delay((unsigned long)((1000)*(4000000/4000.0)));
+   489  056B  3006               	movlw	6
+   490  056C  00F6               	movwf	??_main+2
+   491  056D  3013               	movlw	19
+   492  056E  00F5               	movwf	??_main+1
+   493  056F  30AD               	movlw	173
+   494  0570  00F4               	movwf	??_main
+   495  0571                     u297:	
+   496  0571  0BF4               	decfsz	??_main,f
+   497  0572  2D71               	goto	u297
+   498  0573  0BF5               	decfsz	??_main+1,f
+   499  0574  2D71               	goto	u297
+   500  0575  0BF6               	decfsz	??_main+2,f
+   501  0576  2D71               	goto	u297
+   502  0577  2D78               	nop2
+   503                           
+   504                           ;slide.c: 85: RA3 = 0;
+   505  0578  1283               	bcf	3,5	;RP0=0, select bank0
+   506  0579  1303               	bcf	3,6	;RP1=0, select bank0
+   507  057A  1185               	bcf	5,3	;volatile
+   508                           
+   509                           ;slide.c: 86: RC1 = 0;
+   510  057B  1087               	bcf	7,1	;volatile
+   511                           
+   512                           ;slide.c: 87: RC0 = 0;
+   513  057C  1007               	bcf	7,0	;volatile
+   514  057D                     l69:	
+   515                           
+   516                           ;slide.c: 108: }
+   517                           ;slide.c: 109: }
+   518                           ;slide.c: 110: }
+   519                           ;slide.c: 112: RA6 = 1;
+   520  057D  1705               	bsf	5,6	;volatile
+   521                           
+   522                           ;slide.c: 113: RA7 = 1;
+   523  057E  1785               	bsf	5,7	;volatile
+   524                           
+   525                           ;slide.c: 114: RC7 = 0;
+   526  057F  1387               	bcf	7,7	;volatile
+   527                           
+   528                           ;slide.c: 115: count = 0;
+   529  0580  01F2               	clrf	_count
+   530  0581  01F3               	clrf	_count+1
+   531  0582                     l644:	
+   532                           ;slide.c: 116: while(1)
+   533                           
+   534                           
+   535                           ;slide.c: 117: {
+   536                           ;slide.c: 118: if(T0IF)
+   537  0582  1D0B               	btfss	11,2	;volatile
+   538  0583  2D82               	goto	l644
+   539                           
+   540                           ;slide.c: 119: {
+   541                           ;slide.c: 120: T0IF = 0;
+   542  0584  110B               	bcf	11,2	;volatile
+   543                           
+   544                           ;slide.c: 121: count++;
+   545  0585  3001               	movlw	1
+   546  0586  07F2               	addwf	_count,f
+   547  0587  1803               	skipnc
+   548  0588  0AF3               	incf	_count+1,f
+   549  0589  3000               	movlw	0
+   550  058A  07F3               	addwf	_count+1,f
+   551                           
+   552                           ;slide.c: 122: if(!RB7)
+   553  058B  1283               	bcf	3,5	;RP0=0, select bank0
+   554  058C  1303               	bcf	3,6	;RP1=0, select bank0
+   555  058D  1B86               	btfsc	6,7	;volatile
+   556  058E  2DE9               	goto	l670
+   557                           
+   558                           ;slide.c: 123: {
+   559                           ;slide.c: 124: RA3 = 1;
+   560  058F  1585               	bsf	5,3	;volatile
+   561                           
+   562                           ;slide.c: 125: _delay((unsigned long)((90)*(4000000/4000.0)));
+   563  0590  3075               	movlw	117
+   564  0591  00F5               	movwf	??_main+1
+   565  0592  30E1               	movlw	225
+   566  0593  00F4               	movwf	??_main
+   567  0594                     u387:	
+   568  0594  0BF4               	decfsz	??_main,f
+   569  0595  2D94               	goto	u387
+   570  0596  0BF5               	decfsz	??_main+1,f
+   571  0597  2D94               	goto	u387
+   572                           
+   573                           ;slide.c: 126: RA3 = 0;
+   574  0598  1283               	bcf	3,5	;RP0=0, select bank0
+   575  0599  1303               	bcf	3,6	;RP1=0, select bank0
+   576  059A  1185               	bcf	5,3	;volatile
+   577                           
+   578                           ;slide.c: 127: _delay((unsigned long)((50)*(4000000/4000.0)));
+   579  059B  3041               	movlw	65
+   580  059C  00F5               	movwf	??_main+1
+   581  059D  30EE               	movlw	238
+   582  059E  00F4               	movwf	??_main
+   583  059F                     u397:	
+   584  059F  0BF4               	decfsz	??_main,f
+   585  05A0  2D9F               	goto	u397
+   586  05A1  0BF5               	decfsz	??_main+1,f
+   587  05A2  2D9F               	goto	u397
+   588  05A3  0000               	nop
+   589                           
+   590                           ;slide.c: 128: RA3 = 1;
+   591  05A4  1283               	bcf	3,5	;RP0=0, select bank0
+   592  05A5  1303               	bcf	3,6	;RP1=0, select bank0
+   593  05A6  1585               	bsf	5,3	;volatile
+   594                           
+   595                           ;slide.c: 129: _delay((unsigned long)((90)*(4000000/4000.0)));
+   596  05A7  3075               	movlw	117
+   597  05A8  00F5               	movwf	??_main+1
+   598  05A9  30E1               	movlw	225
+   599  05AA  00F4               	movwf	??_main
+   600  05AB                     u407:	
+   601  05AB  0BF4               	decfsz	??_main,f
+   602  05AC  2DAB               	goto	u407
+   603  05AD  0BF5               	decfsz	??_main+1,f
+   604  05AE  2DAB               	goto	u407
+   605                           
+   606                           ;slide.c: 130: RA3 = 0;
+   607  05AF  1283               	bcf	3,5	;RP0=0, select bank0
+   608  05B0  1303               	bcf	3,6	;RP1=0, select bank0
+   609  05B1  1185               	bcf	5,3	;volatile
+   610                           
+   611                           ;slide.c: 131: _delay((unsigned long)((50)*(4000000/4000.0)));
+   612  05B2  3041               	movlw	65
+   613  05B3  00F5               	movwf	??_main+1
+   614  05B4  30EE               	movlw	238
+   615  05B5  00F4               	movwf	??_main
+   616  05B6                     u417:	
+   617  05B6  0BF4               	decfsz	??_main,f
+   618  05B7  2DB6               	goto	u417
+   619  05B8  0BF5               	decfsz	??_main+1,f
+   620  05B9  2DB6               	goto	u417
+   621  05BA  0000               	nop
+   622                           
+   623                           ;slide.c: 132: RA3 = 1;
+   624  05BB  1283               	bcf	3,5	;RP0=0, select bank0
+   625  05BC  1303               	bcf	3,6	;RP1=0, select bank0
+   626  05BD  1585               	bsf	5,3	;volatile
+   627                           
+   628                           ;slide.c: 133: _delay((unsigned long)((90)*(4000000/4000.0)));
+   629  05BE  3075               	movlw	117
+   630  05BF  00F5               	movwf	??_main+1
+   631  05C0  30E1               	movlw	225
+   632  05C1  00F4               	movwf	??_main
+   633  05C2                     u427:	
+   634  05C2  0BF4               	decfsz	??_main,f
+   635  05C3  2DC2               	goto	u427
+   636  05C4  0BF5               	decfsz	??_main+1,f
+   637  05C5  2DC2               	goto	u427
+   638                           
+   639                           ;slide.c: 134: RA3 = 0;
+   640  05C6  1283               	bcf	3,5	;RP0=0, select bank0
+   641  05C7  1303               	bcf	3,6	;RP1=0, select bank0
+   642  05C8  1185               	bcf	5,3	;volatile
+   643                           
+   644                           ;slide.c: 135: _delay((unsigned long)((50)*(4000000/4000.0)));
+   645  05C9  3041               	movlw	65
+   646  05CA  00F5               	movwf	??_main+1
+   647  05CB  30EE               	movlw	238
+   648  05CC  00F4               	movwf	??_main
+   649  05CD                     u437:	
+   650  05CD  0BF4               	decfsz	??_main,f
+   651  05CE  2DCD               	goto	u437
+   652  05CF  0BF5               	decfsz	??_main+1,f
+   653  05D0  2DCD               	goto	u437
+   654  05D1  0000               	nop
+   655                           
+   656                           ;slide.c: 136: RA3 = 1;
+   657  05D2  1283               	bcf	3,5	;RP0=0, select bank0
+   658  05D3  1303               	bcf	3,6	;RP1=0, select bank0
+   659  05D4  1585               	bsf	5,3	;volatile
+   660                           
+   661                           ;slide.c: 137: _delay((unsigned long)((90)*(4000000/4000.0)));
+   662  05D5  3075               	movlw	117
+   663  05D6  00F5               	movwf	??_main+1
+   664  05D7  30E1               	movlw	225
+   665  05D8  00F4               	movwf	??_main
+   666  05D9                     u447:	
+   667  05D9  0BF4               	decfsz	??_main,f
+   668  05DA  2DD9               	goto	u447
+   669  05DB  0BF5               	decfsz	??_main+1,f
+   670  05DC  2DD9               	goto	u447
+   671                           
+   672                           ;slide.c: 138: RA3 = 0;
+   673  05DD  1283               	bcf	3,5	;RP0=0, select bank0
+   674  05DE  1303               	bcf	3,6	;RP1=0, select bank0
+   675  05DF  1185               	bcf	5,3	;volatile
+   676                           
+   677                           ;slide.c: 139: _delay((unsigned long)((50)*(4000000/4000.0)));
+   678  05E0  3041               	movlw	65
+   679  05E1  00F5               	movwf	??_main+1
+   680  05E2  30EE               	movlw	238
+   681  05E3  00F4               	movwf	??_main
+   682  05E4                     u457:	
+   683  05E4  0BF4               	decfsz	??_main,f
+   684  05E5  2DE4               	goto	u457
+   685  05E6  0BF5               	decfsz	??_main+1,f
+   686  05E7  2DE4               	goto	u457
+   687  05E8  0000               	nop
+   688  05E9                     l670:	
+   689                           
+   690                           ;slide.c: 141: }
+   691                           ;slide.c: 142: if(!RB4)
+   692  05E9  1283               	bcf	3,5	;RP0=0, select bank0
+   693  05EA  1303               	bcf	3,6	;RP1=0, select bank0
+   694  05EB  1A06               	btfsc	6,4	;volatile
+   695  05EC  2E0C               	goto	l690
+   696                           
+   697                           ;slide.c: 143: {
+   698                           ;slide.c: 144: count=0;
+   699  05ED  01F2               	clrf	_count
+   700  05EE  01F3               	clrf	_count+1
+   701                           
+   702                           ;slide.c: 145: RA3 = 0;
+   703  05EF  1185               	bcf	5,3	;volatile
+   704                           
+   705                           ;slide.c: 147: RA6 = 0;
+   706  05F0  1305               	bcf	5,6	;volatile
+   707                           
+   708                           ;slide.c: 148: RA7 = 0;
+   709  05F1  1385               	bcf	5,7	;volatile
+   710                           
+   711                           ;slide.c: 149: _delay((unsigned long)((2000)*(4000000/4000.0)));
+   712  05F2  300B               	movlw	11
+   713  05F3  00F6               	movwf	??_main+2
+   714  05F4  3026               	movlw	38
+   715  05F5  00F5               	movwf	??_main+1
+   716  05F6  305D               	movlw	93
+   717  05F7  00F4               	movwf	??_main
+   718  05F8                     u467:	
+   719  05F8  0BF4               	decfsz	??_main,f
+   720  05F9  2DF8               	goto	u467
+   721  05FA  0BF5               	decfsz	??_main+1,f
+   722  05FB  2DF8               	goto	u467
+   723  05FC  0BF6               	decfsz	??_main+2,f
+   724  05FD  2DF8               	goto	u467
+   725  05FE  2DFF               	nop2
+   726                           
+   727                           ;slide.c: 151: RC0 = 0;
+   728  05FF  1283               	bcf	3,5	;RP0=0, select bank0
+   729  0600  1303               	bcf	3,6	;RP1=0, select bank0
+   730  0601  1007               	bcf	7,0	;volatile
+   731                           
+   732                           ;slide.c: 152: _delay((unsigned long)((100)*(4000000/4000.0)));
+   733  0602  3082               	movlw	130
+   734  0603  00F5               	movwf	??_main+1
+   735  0604  30DD               	movlw	221
+   736  0605  00F4               	movwf	??_main
+   737  0606                     u477:	
+   738  0606  0BF4               	decfsz	??_main,f
+   739  0607  2E06               	goto	u477
+   740  0608  0BF5               	decfsz	??_main+1,f
+   741  0609  2E06               	goto	u477
+   742  060A  2E0B               	nop2
+   743  060B  2E58               	goto	L1
+   744  060C                     l690:	
+   745                           ;slide.c: 156: break;
+   746                           
+   747                           ;slide.c: 155: RC1 = 0;
+   748                           
+   749                           ;slide.c: 154: RC0 = 0;
+   750                           
+   751                           
+   752                           ;slide.c: 157: }
+   753                           ;slide.c: 159: if(count>=915)
+   754  060C  0873               	movf	_count+1,w
+   755  060D  3A80               	xorlw	128
+   756  060E  00FF               	movwf	127
+   757  060F  3083               	movlw	131
+   758  0610  027F               	subwf	127,w
+   759  0611  1D03               	skipz
+   760  0612  2E15               	goto	u125
+   761  0613  3093               	movlw	147
+   762  0614  0272               	subwf	_count,w
+   763  0615                     u125:	
+   764  0615  1C03               	skipc
+   765  0616  2E36               	goto	l700
+   766                           
+   767                           ;slide.c: 160: {
+   768                           ;slide.c: 161: RC7 = 1;
+   769  0617  1283               	bcf	3,5	;RP0=0, select bank0
+   770  0618  1303               	bcf	3,6	;RP1=0, select bank0
+   771  0619  1787               	bsf	7,7	;volatile
+   772                           
+   773                           ;slide.c: 162: if(RB4 == 1)
+   774  061A  1E06               	btfss	6,4	;volatile
+   775  061B  2D82               	goto	l644
+   776                           
+   777                           ;slide.c: 163: {
+   778                           ;slide.c: 165: RA3=1;
+   779  061C  1585               	bsf	5,3	;volatile
+   780                           
+   781                           ;slide.c: 166: _delay((unsigned long)((550)*(4000000/4000.0)));
+   782  061D  3003               	movlw	3
+   783  061E  00F6               	movwf	??_main+2
+   784  061F  30CB               	movlw	203
+   785  0620  00F5               	movwf	??_main+1
+   786  0621  3045               	movlw	69
+   787  0622  00F4               	movwf	??_main
+   788  0623                     u487:	
+   789  0623  0BF4               	decfsz	??_main,f
+   790  0624  2E23               	goto	u487
+   791  0625  0BF5               	decfsz	??_main+1,f
+   792  0626  2E23               	goto	u487
+   793  0627  0BF6               	decfsz	??_main+2,f
+   794  0628  2E23               	goto	u487
+   795                           
+   796                           ;slide.c: 167: RA3 = 0;
+   797  0629  1283               	bcf	3,5	;RP0=0, select bank0
+   798  062A  1303               	bcf	3,6	;RP1=0, select bank0
+   799  062B  1185               	bcf	5,3	;volatile
+   800                           
+   801                           ;slide.c: 168: _delay((unsigned long)((100)*(4000000/4000.0)));
+   802  062C  3082               	movlw	130
+   803  062D  00F5               	movwf	??_main+1
+   804  062E  30DD               	movlw	221
+   805  062F  00F4               	movwf	??_main
+   806  0630                     u497:	
+   807  0630  0BF4               	decfsz	??_main,f
+   808  0631  2E30               	goto	u497
+   809  0632  0BF5               	decfsz	??_main+1,f
+   810  0633  2E30               	goto	u497
+   811  0634  2E35               	nop2
+   812                           
+   813                           ;slide.c: 170: }
+   814                           ;slide.c: 172: }
+   815  0635  2D82               	goto	l644
+   816  0636                     l700:	
+   817                           
+   818                           ;slide.c: 173: else if((count>=915)&&(!RB4))
+   819  0636  0873               	movf	_count+1,w
+   820  0637  3A80               	xorlw	128
+   821  0638  00FF               	movwf	127
+   822  0639  3083               	movlw	131
+   823  063A  027F               	subwf	127,w
+   824  063B  1D03               	skipz
+   825  063C  2E3F               	goto	u145
+   826  063D  3093               	movlw	147
+   827  063E  0272               	subwf	_count,w
+   828  063F                     u145:	
+   829  063F  1C03               	skipc
+   830  0640  2D82               	goto	l644
+   831  0641  1283               	bcf	3,5	;RP0=0, select bank0
+   832  0642  1303               	bcf	3,6	;RP1=0, select bank0
+   833  0643  1A06               	btfsc	6,4	;volatile
+   834  0644  2D82               	goto	l644
+   835                           
+   836                           ;slide.c: 174: {
+   837                           ;slide.c: 175: RC7 = 0;
+   838  0645  1387               	bcf	7,7	;volatile
+   839                           
+   840                           ;slide.c: 176: count=0;
+   841  0646  01F2               	clrf	_count
+   842  0647  01F3               	clrf	_count+1
+   843                           
+   844                           ;slide.c: 177: RA3 = 0;
+   845  0648  1185               	bcf	5,3	;volatile
+   846                           
+   847                           ;slide.c: 178: RA6 = 0;
+   848  0649  1305               	bcf	5,6	;volatile
+   849                           
+   850                           ;slide.c: 179: RA7 = 0;
+   851  064A  1385               	bcf	5,7	;volatile
+   852                           
+   853                           ;slide.c: 180: _delay((unsigned long)((2000)*(4000000/4000.0)));
+   854  064B  300B               	movlw	11
+   855  064C  00F6               	movwf	??_main+2
+   856  064D  3026               	movlw	38
+   857  064E  00F5               	movwf	??_main+1
+   858  064F  305D               	movlw	93
+   859  0650  00F4               	movwf	??_main
+   860  0651                     u507:	
+   861  0651  0BF4               	decfsz	??_main,f
+   862  0652  2E51               	goto	u507
+   863  0653  0BF5               	decfsz	??_main+1,f
+   864  0654  2E51               	goto	u507
+   865  0655  0BF6               	decfsz	??_main+2,f
+   866  0656  2E51               	goto	u507
+   867  0657  2E58               	nop2
+   868  0658                     L1:	
+   869                           
+   870                           ;slide.c: 181: RC0 = 0;
+   871  0658  1283               	bcf	3,5	;RP0=0, select bank0
+   872  0659  1303               	bcf	3,6	;RP1=0, select bank0
+   873  065A  1007               	bcf	7,0	;volatile
+   874                           
+   875                           ;slide.c: 182: RC1 = 0;
+   876  065B  1087               	bcf	7,1	;volatile
+   877                           
+   878                           ;slide.c: 183: break;
+   879  065C  2E61               	goto	l81
+   880  065D                     l61:	
+   881                           ;slide.c: 184: }
+   882                           ;slide.c: 186: }
+   883                           ;slide.c: 187: }
+   884                           ;slide.c: 190: }
+   885                           
+   886                           
+   887                           ;slide.c: 191: else
+   888                           ;slide.c: 192: {
+   889                           ;slide.c: 193: RC0 = 0;
+   890  065D  1007               	bcf	7,0	;volatile
+   891                           
+   892                           ;slide.c: 194: RA3 = 0;
+   893  065E  1185               	bcf	5,3	;volatile
+   894                           
+   895                           ;slide.c: 195: RA6 = 0;
+   896  065F  1305               	bcf	5,6	;volatile
+   897                           
+   898                           ;slide.c: 196: RA7 = 0;
+   899  0660  1385               	bcf	5,7	;volatile
+   900  0661                     l81:	
+   901                           
+   902                           ;slide.c: 197: }
+   903                           ;slide.c: 198: if(!RB7)
+   904  0661  1B86               	btfsc	6,7	;volatile
+   905  0662  2FC8               	goto	l82
+   906  0663                     l83:	
+   907                           ;slide.c: 199: {
+   908                           ;slide.c: 200: while(!RB7);
+   909                           
+   910  0663  1F86               	btfss	6,7	;volatile
+   911  0664  2E63               	goto	l83
+   912                           
+   913                           ;slide.c: 203: RC1 = 1;
+   914  0665  1487               	bsf	7,1	;volatile
+   915                           
+   916                           ;slide.c: 204: RC0 = 0;
+   917  0666  1007               	bcf	7,0	;volatile
+   918                           
+   919                           ;slide.c: 205: while(!RB5)
+   920  0667  2EC6               	goto	l758
+   921  0668                     l89:	
+   922                           ;slide.c: 219: break;
+   923                           
+   924                           
+   925                           ;slide.c: 220: }
+   926                           ;slide.c: 221: if(!RB6)
+   927  0668  1283               	bcf	3,5	;RP0=0, select bank0
+   928  0669  1303               	bcf	3,6	;RP1=0, select bank0
+   929  066A  1B06               	btfsc	6,6	;volatile
+   930  066B  2EC6               	goto	l758
+   931                           
+   932                           ;slide.c: 222: {
+   933                           ;slide.c: 223: RA3 = 1;
+   934  066C  1585               	bsf	5,3	;volatile
+   935                           
+   936                           ;slide.c: 224: _delay((unsigned long)((90)*(4000000/4000.0)));
+   937  066D  3075               	movlw	117
+   938  066E  00F5               	movwf	??_main+1
+   939  066F  30E1               	movlw	225
+   940  0670  00F4               	movwf	??_main
+   941  0671                     u527:	
+   942  0671  0BF4               	decfsz	??_main,f
+   943  0672  2E71               	goto	u527
+   944  0673  0BF5               	decfsz	??_main+1,f
+   945  0674  2E71               	goto	u527
+   946                           
+   947                           ;slide.c: 225: RA3 = 0;
+   948  0675  1283               	bcf	3,5	;RP0=0, select bank0
+   949  0676  1303               	bcf	3,6	;RP1=0, select bank0
+   950  0677  1185               	bcf	5,3	;volatile
+   951                           
+   952                           ;slide.c: 226: _delay((unsigned long)((50)*(4000000/4000.0)));
+   953  0678  3041               	movlw	65
+   954  0679  00F5               	movwf	??_main+1
+   955  067A  30EE               	movlw	238
+   956  067B  00F4               	movwf	??_main
+   957  067C                     u537:	
+   958  067C  0BF4               	decfsz	??_main,f
+   959  067D  2E7C               	goto	u537
+   960  067E  0BF5               	decfsz	??_main+1,f
+   961  067F  2E7C               	goto	u537
+   962  0680  0000               	nop
+   963                           
+   964                           ;slide.c: 227: RA3 = 1;
+   965  0681  1283               	bcf	3,5	;RP0=0, select bank0
+   966  0682  1303               	bcf	3,6	;RP1=0, select bank0
+   967  0683  1585               	bsf	5,3	;volatile
+   968                           
+   969                           ;slide.c: 228: _delay((unsigned long)((90)*(4000000/4000.0)));
+   970  0684  3075               	movlw	117
+   971  0685  00F5               	movwf	??_main+1
+   972  0686  30E1               	movlw	225
+   973  0687  00F4               	movwf	??_main
+   974  0688                     u547:	
+   975  0688  0BF4               	decfsz	??_main,f
+   976  0689  2E88               	goto	u547
+   977  068A  0BF5               	decfsz	??_main+1,f
+   978  068B  2E88               	goto	u547
+   979                           
+   980                           ;slide.c: 229: RA3 = 0;
+   981  068C  1283               	bcf	3,5	;RP0=0, select bank0
+   982  068D  1303               	bcf	3,6	;RP1=0, select bank0
+   983  068E  1185               	bcf	5,3	;volatile
+   984                           
+   985                           ;slide.c: 230: _delay((unsigned long)((50)*(4000000/4000.0)));
+   986  068F  3041               	movlw	65
+   987  0690  00F5               	movwf	??_main+1
+   988  0691  30EE               	movlw	238
+   989  0692  00F4               	movwf	??_main
+   990  0693                     u557:	
+   991  0693  0BF4               	decfsz	??_main,f
+   992  0694  2E93               	goto	u557
+   993  0695  0BF5               	decfsz	??_main+1,f
+   994  0696  2E93               	goto	u557
+   995  0697  0000               	nop
+   996                           
+   997                           ;slide.c: 231: RA3 = 1;
+   998  0698  1283               	bcf	3,5	;RP0=0, select bank0
+   999  0699  1303               	bcf	3,6	;RP1=0, select bank0
+  1000  069A  1585               	bsf	5,3	;volatile
+  1001                           
+  1002                           ;slide.c: 232: _delay((unsigned long)((90)*(4000000/4000.0)));
+  1003  069B  3075               	movlw	117
+  1004  069C  00F5               	movwf	??_main+1
+  1005  069D  30E1               	movlw	225
+  1006  069E  00F4               	movwf	??_main
+  1007  069F                     u567:	
+  1008  069F  0BF4               	decfsz	??_main,f
+  1009  06A0  2E9F               	goto	u567
+  1010  06A1  0BF5               	decfsz	??_main+1,f
+  1011  06A2  2E9F               	goto	u567
+  1012                           
+  1013                           ;slide.c: 233: RA3 = 0;
+  1014  06A3  1283               	bcf	3,5	;RP0=0, select bank0
+  1015  06A4  1303               	bcf	3,6	;RP1=0, select bank0
+  1016  06A5  1185               	bcf	5,3	;volatile
+  1017                           
+  1018                           ;slide.c: 234: _delay((unsigned long)((50)*(4000000/4000.0)));
+  1019  06A6  3041               	movlw	65
+  1020  06A7  00F5               	movwf	??_main+1
+  1021  06A8  30EE               	movlw	238
+  1022  06A9  00F4               	movwf	??_main
+  1023  06AA                     u577:	
+  1024  06AA  0BF4               	decfsz	??_main,f
+  1025  06AB  2EAA               	goto	u577
+  1026  06AC  0BF5               	decfsz	??_main+1,f
+  1027  06AD  2EAA               	goto	u577
+  1028  06AE  0000               	nop
+  1029                           
+  1030                           ;slide.c: 235: RA3 = 1;
+  1031  06AF  1283               	bcf	3,5	;RP0=0, select bank0
+  1032  06B0  1303               	bcf	3,6	;RP1=0, select bank0
+  1033  06B1  1585               	bsf	5,3	;volatile
+  1034                           
+  1035                           ;slide.c: 236: _delay((unsigned long)((90)*(4000000/4000.0)));
+  1036  06B2  3075               	movlw	117
+  1037  06B3  00F5               	movwf	??_main+1
+  1038  06B4  30E1               	movlw	225
+  1039  06B5  00F4               	movwf	??_main
+  1040  06B6                     u587:	
+  1041  06B6  0BF4               	decfsz	??_main,f
+  1042  06B7  2EB6               	goto	u587
+  1043  06B8  0BF5               	decfsz	??_main+1,f
+  1044  06B9  2EB6               	goto	u587
+  1045                           
+  1046                           ;slide.c: 237: RA3 = 0;
+  1047  06BA  1283               	bcf	3,5	;RP0=0, select bank0
+  1048  06BB  1303               	bcf	3,6	;RP1=0, select bank0
+  1049  06BC  1185               	bcf	5,3	;volatile
+  1050                           
+  1051                           ;slide.c: 238: _delay((unsigned long)((50)*(4000000/4000.0)));
+  1052  06BD  3041               	movlw	65
+  1053  06BE  00F5               	movwf	??_main+1
+  1054  06BF  30EE               	movlw	238
+  1055  06C0  00F4               	movwf	??_main
+  1056  06C1                     u597:	
+  1057  06C1  0BF4               	decfsz	??_main,f
+  1058  06C2  2EC1               	goto	u597
+  1059  06C3  0BF5               	decfsz	??_main+1,f
+  1060  06C4  2EC1               	goto	u597
+  1061  06C5  0000               	nop
+  1062  06C6                     l758:	
+  1063  06C6  1283               	bcf	3,5	;RP0=0, select bank0
+  1064  06C7  1303               	bcf	3,6	;RP1=0, select bank0
+  1065  06C8  1A86               	btfsc	6,5	;volatile
+  1066  06C9  2EF5               	goto	l90
+  1067                           
+  1068                           ;slide.c: 206: {
+  1069                           ;slide.c: 207: if(T0IF)
+  1070  06CA  1D0B               	btfss	11,2	;volatile
+  1071  06CB  2EC6               	goto	l758
+  1072                           
+  1073                           ;slide.c: 208: {
+  1074                           ;slide.c: 209: T0IF = 0;
+  1075  06CC  110B               	bcf	11,2	;volatile
+  1076                           
+  1077                           ;slide.c: 210: count++;
+  1078  06CD  3001               	movlw	1
+  1079  06CE  07F2               	addwf	_count,f
+  1080  06CF  1803               	skipnc
+  1081  06D0  0AF3               	incf	_count+1,f
+  1082  06D1  3000               	movlw	0
+  1083  06D2  07F3               	addwf	_count+1,f
+  1084                           
+  1085                           ;slide.c: 211: if(count>=900)
+  1086  06D3  0873               	movf	_count+1,w
+  1087  06D4  3A80               	xorlw	128
+  1088  06D5  00FF               	movwf	127
+  1089  06D6  3083               	movlw	131
+  1090  06D7  027F               	subwf	127,w
+  1091  06D8  1D03               	skipz
+  1092  06D9  2EDC               	goto	u195
+  1093  06DA  3084               	movlw	132
+  1094  06DB  0272               	subwf	_count,w
+  1095  06DC                     u195:	
+  1096  06DC  1C03               	skipc
+  1097  06DD  2E68               	goto	l89
+  1098                           
+  1099                           ;slide.c: 212: {
+  1100                           ;slide.c: 213: count = 0;
+  1101  06DE  01F2               	clrf	_count
+  1102  06DF  01F3               	clrf	_count+1
+  1103                           
+  1104                           ;slide.c: 214: RA3 = 1;
+  1105  06E0  1283               	bcf	3,5	;RP0=0, select bank0
+  1106  06E1  1303               	bcf	3,6	;RP1=0, select bank0
+  1107  06E2  1585               	bsf	5,3	;volatile
+  1108                           
+  1109                           ;slide.c: 215: _delay((unsigned long)((1000)*(4000000/4000.0)));
+  1110  06E3  3006               	movlw	6
+  1111  06E4  00F6               	movwf	??_main+2
+  1112  06E5  3013               	movlw	19
+  1113  06E6  00F5               	movwf	??_main+1
+  1114  06E7  30AD               	movlw	173
+  1115  06E8  00F4               	movwf	??_main
+  1116  06E9                     u517:	
+  1117  06E9  0BF4               	decfsz	??_main,f
+  1118  06EA  2EE9               	goto	u517
+  1119  06EB  0BF5               	decfsz	??_main+1,f
+  1120  06EC  2EE9               	goto	u517
+  1121  06ED  0BF6               	decfsz	??_main+2,f
+  1122  06EE  2EE9               	goto	u517
+  1123  06EF  2EF0               	nop2
+  1124                           
+  1125                           ;slide.c: 216: RA3 = 0;
+  1126  06F0  1283               	bcf	3,5	;RP0=0, select bank0
+  1127  06F1  1303               	bcf	3,6	;RP1=0, select bank0
+  1128  06F2  1185               	bcf	5,3	;volatile
+  1129                           
+  1130                           ;slide.c: 217: RC1 = 0;
+  1131  06F3  1087               	bcf	7,1	;volatile
+  1132                           
+  1133                           ;slide.c: 218: RC0 = 0;
+  1134  06F4  1007               	bcf	7,0	;volatile
+  1135  06F5                     l90:	
+  1136                           
+  1137                           ;slide.c: 240: }
+  1138                           ;slide.c: 241: }
+  1139                           ;slide.c: 242: }
+  1140                           ;slide.c: 243: RA6 = 1;
+  1141  06F5  1705               	bsf	5,6	;volatile
+  1142                           
+  1143                           ;slide.c: 244: RA7 = 1;
+  1144  06F6  1785               	bsf	5,7	;volatile
+  1145                           
+  1146                           ;slide.c: 245: count = 0;
+  1147  06F7  01F2               	clrf	_count
+  1148  06F8  01F3               	clrf	_count+1
+  1149  06F9                     l762:	
+  1150                           ;slide.c: 246: while(1)
+  1151                           
+  1152                           
+  1153                           ;slide.c: 247: {
+  1154                           ;slide.c: 248: if(T0IF)
+  1155  06F9  1D0B               	btfss	11,2	;volatile
+  1156  06FA  2EF9               	goto	l762
+  1157                           
+  1158                           ;slide.c: 249: {
+  1159                           ;slide.c: 250: T0IF = 0;
+  1160  06FB  110B               	bcf	11,2	;volatile
+  1161                           
+  1162                           ;slide.c: 251: count++;
+  1163  06FC  3001               	movlw	1
+  1164  06FD  07F2               	addwf	_count,f
+  1165  06FE  1803               	skipnc
+  1166  06FF  0AF3               	incf	_count+1,f
+  1167  0700  3000               	movlw	0
+  1168  0701  07F3               	addwf	_count+1,f
+  1169                           
+  1170                           ;slide.c: 252: if(!RB6)
+  1171  0702  1283               	bcf	3,5	;RP0=0, select bank0
+  1172  0703  1303               	bcf	3,6	;RP1=0, select bank0
+  1173  0704  1B06               	btfsc	6,6	;volatile
+  1174  0705  2F60               	goto	l788
+  1175                           
+  1176                           ;slide.c: 253: {
+  1177                           ;slide.c: 254: RA3 = 1;
+  1178  0706  1585               	bsf	5,3	;volatile
+  1179                           
+  1180                           ;slide.c: 255: _delay((unsigned long)((90)*(4000000/4000.0)));
+  1181  0707  3075               	movlw	117
+  1182  0708  00F5               	movwf	??_main+1
+  1183  0709  30E1               	movlw	225
+  1184  070A  00F4               	movwf	??_main
+  1185  070B                     u607:	
+  1186  070B  0BF4               	decfsz	??_main,f
+  1187  070C  2F0B               	goto	u607
+  1188  070D  0BF5               	decfsz	??_main+1,f
+  1189  070E  2F0B               	goto	u607
+  1190                           
+  1191                           ;slide.c: 256: RA3 = 0;
+  1192  070F  1283               	bcf	3,5	;RP0=0, select bank0
+  1193  0710  1303               	bcf	3,6	;RP1=0, select bank0
+  1194  0711  1185               	bcf	5,3	;volatile
+  1195                           
+  1196                           ;slide.c: 257: _delay((unsigned long)((50)*(4000000/4000.0)));
+  1197  0712  3041               	movlw	65
+  1198  0713  00F5               	movwf	??_main+1
+  1199  0714  30EE               	movlw	238
+  1200  0715  00F4               	movwf	??_main
+  1201  0716                     u617:	
+  1202  0716  0BF4               	decfsz	??_main,f
+  1203  0717  2F16               	goto	u617
+  1204  0718  0BF5               	decfsz	??_main+1,f
+  1205  0719  2F16               	goto	u617
+  1206  071A  0000               	nop
+  1207                           
+  1208                           ;slide.c: 258: RA3 = 1;
+  1209  071B  1283               	bcf	3,5	;RP0=0, select bank0
+  1210  071C  1303               	bcf	3,6	;RP1=0, select bank0
+  1211  071D  1585               	bsf	5,3	;volatile
+  1212                           
+  1213                           ;slide.c: 259: _delay((unsigned long)((90)*(4000000/4000.0)));
+  1214  071E  3075               	movlw	117
+  1215  071F  00F5               	movwf	??_main+1
+  1216  0720  30E1               	movlw	225
+  1217  0721  00F4               	movwf	??_main
+  1218  0722                     u627:	
+  1219  0722  0BF4               	decfsz	??_main,f
+  1220  0723  2F22               	goto	u627
+  1221  0724  0BF5               	decfsz	??_main+1,f
+  1222  0725  2F22               	goto	u627
+  1223                           
+  1224                           ;slide.c: 260: RA3 = 0;
+  1225  0726  1283               	bcf	3,5	;RP0=0, select bank0
+  1226  0727  1303               	bcf	3,6	;RP1=0, select bank0
+  1227  0728  1185               	bcf	5,3	;volatile
+  1228                           
+  1229                           ;slide.c: 261: _delay((unsigned long)((50)*(4000000/4000.0)));
+  1230  0729  3041               	movlw	65
+  1231  072A  00F5               	movwf	??_main+1
+  1232  072B  30EE               	movlw	238
+  1233  072C  00F4               	movwf	??_main
+  1234  072D                     u637:	
+  1235  072D  0BF4               	decfsz	??_main,f
+  1236  072E  2F2D               	goto	u637
+  1237  072F  0BF5               	decfsz	??_main+1,f
+  1238  0730  2F2D               	goto	u637
+  1239  0731  0000               	nop
+  1240                           
+  1241                           ;slide.c: 262: RA3 = 1;
+  1242  0732  1283               	bcf	3,5	;RP0=0, select bank0
+  1243  0733  1303               	bcf	3,6	;RP1=0, select bank0
+  1244  0734  1585               	bsf	5,3	;volatile
+  1245                           
+  1246                           ;slide.c: 263: _delay((unsigned long)((90)*(4000000/4000.0)));
+  1247  0735  3075               	movlw	117
+  1248  0736  00F5               	movwf	??_main+1
+  1249  0737  30E1               	movlw	225
+  1250  0738  00F4               	movwf	??_main
+  1251  0739                     u647:	
+  1252  0739  0BF4               	decfsz	??_main,f
+  1253  073A  2F39               	goto	u647
+  1254  073B  0BF5               	decfsz	??_main+1,f
+  1255  073C  2F39               	goto	u647
+  1256                           
+  1257                           ;slide.c: 264: RA3 = 0;
+  1258  073D  1283               	bcf	3,5	;RP0=0, select bank0
+  1259  073E  1303               	bcf	3,6	;RP1=0, select bank0
+  1260  073F  1185               	bcf	5,3	;volatile
+  1261                           
+  1262                           ;slide.c: 265: _delay((unsigned long)((50)*(4000000/4000.0)));
+  1263  0740  3041               	movlw	65
+  1264  0741  00F5               	movwf	??_main+1
+  1265  0742  30EE               	movlw	238
+  1266  0743  00F4               	movwf	??_main
+  1267  0744                     u657:	
+  1268  0744  0BF4               	decfsz	??_main,f
+  1269  0745  2F44               	goto	u657
+  1270  0746  0BF5               	decfsz	??_main+1,f
+  1271  0747  2F44               	goto	u657
+  1272  0748  0000               	nop
+  1273                           
+  1274                           ;slide.c: 266: RA3 = 1;
+  1275  0749  1283               	bcf	3,5	;RP0=0, select bank0
+  1276  074A  1303               	bcf	3,6	;RP1=0, select bank0
+  1277  074B  1585               	bsf	5,3	;volatile
+  1278                           
+  1279                           ;slide.c: 267: _delay((unsigned long)((90)*(4000000/4000.0)));
+  1280  074C  3075               	movlw	117
+  1281  074D  00F5               	movwf	??_main+1
+  1282  074E  30E1               	movlw	225
+  1283  074F  00F4               	movwf	??_main
+  1284  0750                     u667:	
+  1285  0750  0BF4               	decfsz	??_main,f
+  1286  0751  2F50               	goto	u667
+  1287  0752  0BF5               	decfsz	??_main+1,f
+  1288  0753  2F50               	goto	u667
+  1289                           
+  1290                           ;slide.c: 268: RA3 = 0;
+  1291  0754  1283               	bcf	3,5	;RP0=0, select bank0
+  1292  0755  1303               	bcf	3,6	;RP1=0, select bank0
+  1293  0756  1185               	bcf	5,3	;volatile
+  1294                           
+  1295                           ;slide.c: 269: _delay((unsigned long)((50)*(4000000/4000.0)));
+  1296  0757  3041               	movlw	65
+  1297  0758  00F5               	movwf	??_main+1
+  1298  0759  30EE               	movlw	238
+  1299  075A  00F4               	movwf	??_main
+  1300  075B                     u677:	
+  1301  075B  0BF4               	decfsz	??_main,f
+  1302  075C  2F5B               	goto	u677
+  1303  075D  0BF5               	decfsz	??_main+1,f
+  1304  075E  2F5B               	goto	u677
+  1305  075F  0000               	nop
+  1306  0760                     l788:	
+  1307                           
+  1308                           ;slide.c: 271: }
+  1309                           ;slide.c: 272: if(!RB5)
+  1310  0760  1283               	bcf	3,5	;RP0=0, select bank0
+  1311  0761  1303               	bcf	3,6	;RP1=0, select bank0
+  1312  0762  1A86               	btfsc	6,5	;volatile
+  1313  0763  2F77               	goto	l804
+  1314                           
+  1315                           ;slide.c: 273: {
+  1316                           ;slide.c: 274: count=0;
+  1317  0764  01F2               	clrf	_count
+  1318  0765  01F3               	clrf	_count+1
+  1319                           
+  1320                           ;slide.c: 275: RA3 = 0;
+  1321  0766  1185               	bcf	5,3	;volatile
+  1322                           
+  1323                           ;slide.c: 276: RA6 = 0;
+  1324  0767  1305               	bcf	5,6	;volatile
+  1325                           
+  1326                           ;slide.c: 277: RA7 = 0;
+  1327  0768  1385               	bcf	5,7	;volatile
+  1328                           
+  1329                           ;slide.c: 278: _delay((unsigned long)((2000)*(4000000/4000.0)));
+  1330  0769  300B               	movlw	11
+  1331  076A  00F6               	movwf	??_main+2
+  1332  076B  3026               	movlw	38
+  1333  076C  00F5               	movwf	??_main+1
+  1334  076D  305D               	movlw	93
+  1335  076E  00F4               	movwf	??_main
+  1336  076F                     u687:	
+  1337  076F  0BF4               	decfsz	??_main,f
+  1338  0770  2F6F               	goto	u687
+  1339  0771  0BF5               	decfsz	??_main+1,f
+  1340  0772  2F6F               	goto	u687
+  1341  0773  0BF6               	decfsz	??_main+2,f
+  1342  0774  2F6F               	goto	u687
+  1343  0775  2F76               	nop2
+  1344  0776  2FC3               	goto	L2
+  1345  0777                     l804:	
+  1346                           ;slide.c: 281: break;
+  1347                           
+  1348                           ;slide.c: 280: RC0 = 0;
+  1349                           
+  1350                           ;slide.c: 279: RC1 = 0;
+  1351                           
+  1352                           
+  1353                           ;slide.c: 282: }
+  1354                           ;slide.c: 284: if(count>=915)
+  1355  0777  0873               	movf	_count+1,w
+  1356  0778  3A80               	xorlw	128
+  1357  0779  00FF               	movwf	127
+  1358  077A  3083               	movlw	131
+  1359  077B  027F               	subwf	127,w
+  1360  077C  1D03               	skipz
+  1361  077D  2F80               	goto	u255
+  1362  077E  3093               	movlw	147
+  1363  077F  0272               	subwf	_count,w
+  1364  0780                     u255:	
+  1365  0780  1C03               	skipc
+  1366  0781  2FA1               	goto	l814
+  1367                           
+  1368                           ;slide.c: 285: {
+  1369                           ;slide.c: 286: RC7 = 1;
+  1370  0782  1283               	bcf	3,5	;RP0=0, select bank0
+  1371  0783  1303               	bcf	3,6	;RP1=0, select bank0
+  1372  0784  1787               	bsf	7,7	;volatile
+  1373                           
+  1374                           ;slide.c: 287: if(RB5 == 1)
+  1375  0785  1E86               	btfss	6,5	;volatile
+  1376  0786  2EF9               	goto	l762
+  1377                           
+  1378                           ;slide.c: 288: {
+  1379                           ;slide.c: 290: RA3=1;
+  1380  0787  1585               	bsf	5,3	;volatile
+  1381                           
+  1382                           ;slide.c: 291: _delay((unsigned long)((550)*(4000000/4000.0)));
+  1383  0788  3003               	movlw	3
+  1384  0789  00F6               	movwf	??_main+2
+  1385  078A  30CB               	movlw	203
+  1386  078B  00F5               	movwf	??_main+1
+  1387  078C  3045               	movlw	69
+  1388  078D  00F4               	movwf	??_main
+  1389  078E                     u697:	
+  1390  078E  0BF4               	decfsz	??_main,f
+  1391  078F  2F8E               	goto	u697
+  1392  0790  0BF5               	decfsz	??_main+1,f
+  1393  0791  2F8E               	goto	u697
+  1394  0792  0BF6               	decfsz	??_main+2,f
+  1395  0793  2F8E               	goto	u697
+  1396                           
+  1397                           ;slide.c: 292: RA3 = 0;
+  1398  0794  1283               	bcf	3,5	;RP0=0, select bank0
+  1399  0795  1303               	bcf	3,6	;RP1=0, select bank0
+  1400  0796  1185               	bcf	5,3	;volatile
+  1401                           
+  1402                           ;slide.c: 293: _delay((unsigned long)((100)*(4000000/4000.0)));
+  1403  0797  3082               	movlw	130
+  1404  0798  00F5               	movwf	??_main+1
+  1405  0799  30DD               	movlw	221
+  1406  079A  00F4               	movwf	??_main
+  1407  079B                     u707:	
+  1408  079B  0BF4               	decfsz	??_main,f
+  1409  079C  2F9B               	goto	u707
+  1410  079D  0BF5               	decfsz	??_main+1,f
+  1411  079E  2F9B               	goto	u707
+  1412  079F  2FA0               	nop2
+  1413                           
+  1414                           ;slide.c: 295: }
+  1415                           ;slide.c: 297: }
+  1416  07A0  2EF9               	goto	l762
+  1417  07A1                     l814:	
+  1418                           
+  1419                           ;slide.c: 298: else if((count>=915)&&(!RB5))
+  1420  07A1  0873               	movf	_count+1,w
+  1421  07A2  3A80               	xorlw	128
+  1422  07A3  00FF               	movwf	127
+  1423  07A4  3083               	movlw	131
+  1424  07A5  027F               	subwf	127,w
+  1425  07A6  1D03               	skipz
+  1426  07A7  2FAA               	goto	u275
+  1427  07A8  3093               	movlw	147
+  1428  07A9  0272               	subwf	_count,w
+  1429  07AA                     u275:	
+  1430  07AA  1C03               	skipc
+  1431  07AB  2EF9               	goto	l762
+  1432  07AC  1283               	bcf	3,5	;RP0=0, select bank0
+  1433  07AD  1303               	bcf	3,6	;RP1=0, select bank0
+  1434  07AE  1A86               	btfsc	6,5	;volatile
+  1435  07AF  2EF9               	goto	l762
+  1436                           
+  1437                           ;slide.c: 299: {
+  1438                           ;slide.c: 300: RC7 = 0;
+  1439  07B0  1387               	bcf	7,7	;volatile
+  1440                           
+  1441                           ;slide.c: 301: count=0;
+  1442  07B1  01F2               	clrf	_count
+  1443  07B2  01F3               	clrf	_count+1
+  1444                           
+  1445                           ;slide.c: 302: RA3 = 0;
+  1446  07B3  1185               	bcf	5,3	;volatile
+  1447                           
+  1448                           ;slide.c: 303: RA6 = 0;
+  1449  07B4  1305               	bcf	5,6	;volatile
+  1450                           
+  1451                           ;slide.c: 304: RA7 = 0;
+  1452  07B5  1385               	bcf	5,7	;volatile
+  1453                           
+  1454                           ;slide.c: 305: _delay((unsigned long)((2000)*(4000000/4000.0)));
+  1455  07B6  300B               	movlw	11
+  1456  07B7  00F6               	movwf	??_main+2
+  1457  07B8  3026               	movlw	38
+  1458  07B9  00F5               	movwf	??_main+1
+  1459  07BA  305D               	movlw	93
+  1460  07BB  00F4               	movwf	??_main
+  1461  07BC                     u717:	
+  1462  07BC  0BF4               	decfsz	??_main,f
+  1463  07BD  2FBC               	goto	u717
+  1464  07BE  0BF5               	decfsz	??_main+1,f
+  1465  07BF  2FBC               	goto	u717
+  1466  07C0  0BF6               	decfsz	??_main+2,f
+  1467  07C1  2FBC               	goto	u717
+  1468  07C2  2FC3               	nop2
+  1469  07C3                     L2:	
+  1470                           
+  1471                           ;slide.c: 306: RC1 = 0;
+  1472  07C3  1283               	bcf	3,5	;RP0=0, select bank0
+  1473  07C4  1303               	bcf	3,6	;RP1=0, select bank0
+  1474  07C5  1087               	bcf	7,1	;volatile
+  1475                           
+  1476                           ;slide.c: 307: RC0 = 0;
+  1477  07C6  1007               	bcf	7,0	;volatile
+  1478                           
+  1479                           ;slide.c: 308: break;
+  1480  07C7  2FCC               	goto	l588
+  1481  07C8                     l82:	
+  1482                           ;slide.c: 309: }
+  1483                           ;slide.c: 311: }
+  1484                           ;slide.c: 312: }
+  1485                           ;slide.c: 314: }
+  1486                           
+  1487                           
+  1488                           ;slide.c: 315: else
+  1489                           ;slide.c: 316: {
+  1490                           ;slide.c: 317: RC1 = 0;
+  1491  07C8  1087               	bcf	7,1	;volatile
+  1492                           
+  1493                           ;slide.c: 318: RA3 = 0;
+  1494  07C9  1185               	bcf	5,3	;volatile
+  1495                           
+  1496                           ;slide.c: 319: RA6 = 0;
+  1497  07CA  1305               	bcf	5,6	;volatile
+  1498                           
+  1499                           ;slide.c: 320: RA7 = 0;
+  1500  07CB  1385               	bcf	5,7	;volatile
+  1501  07CC                     l588:	
+  1502                           ;slide.c: 55: while(1)
+  1503                           
+  1504                           ;slide.c: 322: }
+  1505                           ;slide.c: 324: }
+  1506                           
+  1507                           
+  1508                           ;slide.c: 56: {
+  1509                           ;slide.c: 57: RC1 = 0;
+  1510  07CC  1087               	bcf	7,1	;volatile
+  1511                           
+  1512                           ;slide.c: 58: RC0 = 0;
+  1513  07CD  1007               	bcf	7,0	;volatile
+  1514                           
+  1515                           ;slide.c: 59: RA6 = 0;
+  1516  07CE  1305               	bcf	5,6	;volatile
+  1517                           
+  1518                           ;slide.c: 60: RA7 = 0;
+  1519  07CF  1385               	bcf	5,7	;volatile
+  1520                           
+  1521                           ;slide.c: 62: if((!RB4)&&(!RB5))
+  1522  07D0  1E06               	btfss	6,4	;volatile
+  1523  07D1  2CE4               	goto	l598
+  1524  07D2                     l60:	
+  1525                           
+  1526                           ;slide.c: 325: else
+  1527                           ;slide.c: 326: {
+  1528                           ;slide.c: 327: RC1 = 0;
+  1529  07D2  1087               	bcf	7,1	;volatile
+  1530                           
+  1531                           ;slide.c: 328: RC0 = 0;
+  1532  07D3  1007               	bcf	7,0	;volatile
+  1533                           
+  1534                           ;slide.c: 329: RA6 = 0;
+  1535  07D4  1305               	bcf	5,6	;volatile
+  1536                           
+  1537                           ;slide.c: 330: RA7 = 0;
+  1538  07D5  1385               	bcf	5,7	;volatile
+  1539                           
+  1540                           ;slide.c: 331: RA3 = 0;
+  1541  07D6  1185               	bcf	5,3	;volatile
+  1542                           
+  1543                           ;slide.c: 332: _delay((unsigned long)((500)*(4000000/4000.0)));
+  1544  07D7  3003               	movlw	3
+  1545  07D8  00F6               	movwf	??_main+2
+  1546  07D9  308A               	movlw	138
+  1547  07DA  00F5               	movwf	??_main+1
+  1548  07DB  3055               	movlw	85
+  1549  07DC  00F4               	movwf	??_main
+  1550  07DD                     u727:	
+  1551  07DD  0BF4               	decfsz	??_main,f
+  1552  07DE  2FDD               	goto	u727
+  1553  07DF  0BF5               	decfsz	??_main+1,f
+  1554  07E0  2FDD               	goto	u727
+  1555  07E1  0BF6               	decfsz	??_main+2,f
+  1556  07E2  2FDD               	goto	u727
+  1557  07E3  2FE4               	nop2
+  1558                           
+  1559                           ;slide.c: 333: RA3 = 1;
+  1560  07E4  1283               	bcf	3,5	;RP0=0, select bank0
+  1561  07E5  1303               	bcf	3,6	;RP1=0, select bank0
+  1562  07E6  1585               	bsf	5,3	;volatile
+  1563                           
+  1564                           ;slide.c: 334: _delay((unsigned long)((500)*(4000000/4000.0)));
+  1565  07E7  3003               	movlw	3
+  1566  07E8  00F6               	movwf	??_main+2
+  1567  07E9  308A               	movlw	138
+  1568  07EA  00F5               	movwf	??_main+1
+  1569  07EB  3055               	movlw	85
+  1570  07EC  00F4               	movwf	??_main
+  1571  07ED                     u737:	
+  1572  07ED  0BF4               	decfsz	??_main,f
+  1573  07EE  2FED               	goto	u737
+  1574  07EF  0BF5               	decfsz	??_main+1,f
+  1575  07F0  2FED               	goto	u737
+  1576  07F1  0BF6               	decfsz	??_main+2,f
+  1577  07F2  2FED               	goto	u737
+  1578  07F3  2FF4               	nop2
+  1579                           
+  1580                           ;slide.c: 335: RC7 = 1;
+  1581  07F4  1283               	bcf	3,5	;RP0=0, select bank0
+  1582  07F5  1303               	bcf	3,6	;RP1=0, select bank0
+  1583  07F6  1787               	bsf	7,7	;volatile
+  1584                           
+  1585                           ;slide.c: 336: RC6 = 0;
+  1586  07F7  1307               	bcf	7,6	;volatile
+  1587  07F8  2FCC               	goto	l588
+  1588  07F9                     __end_of_main:	
+  1589  007E                     btemp	set	126	;btemp
+  1590  007E                     wtemp0	set	126
+
+
+Data Sizes:
+    Strings     0
+    Constant    0
+    Data        0
+    BSS         4
+    Persistent  0
+    Stack       0
+
+Auto Spaces:
+    Space          Size  Autos    Used
+    COMMON           14      3       7
+    BANK0            80      0       0
+    BANK1            80      0       0
+    BANK2            80      0       0
+
+Pointer List with Targets:
+
+    None.
+
+Critical Paths under _main in COMMON
+
+    None.
+
+Critical Paths under _main in BANK0
+
+    None.
+
+Critical Paths under _main in BANK1
+
+    None.
+
+Critical Paths under _main in BANK2
+
+    None.
+
+Call Graph Tables:
+
+ ---------------------------------------------------------------------------------
+ (Depth) Function   	        Calls       Base Space   Used Autos Params    Refs
+ ---------------------------------------------------------------------------------
+ (0) _main                                                 3     3      0       0
+                                              0 COMMON     3     3      0
+ ---------------------------------------------------------------------------------
+ Estimated maximum stack depth 0
+ ---------------------------------------------------------------------------------
+
+ Call Graph Graphs:
+
+ _main (ROOT)
+
+ Address spaces:
+Name               Size   Autos  Total    Cost      Usage
+BITCOMMON            E      0       0       0        0.0%
+EEDATA             100      0       0       0        0.0%
+NULL                 0      0       0       0        0.0%
+CODE                 0      0       0       0        0.0%
+COMMON               E      3       7       1       50.0%
+BITSFR0              0      0       0       1        0.0%
+SFR0                 0      0       0       1        0.0%
+BITSFR1              0      0       0       2        0.0%
+SFR1                 0      0       0       2        0.0%
+STACK                0      0       0       2        0.0%
+BANK0               50      0       0       3        0.0%
+BITBANK1            50      0       0       4        0.0%
+BITSFR3              0      0       0       4        0.0%
+SFR3                 0      0       0       4        0.0%
+BANK1               50      0       0       5        0.0%
+BITSFR2              0      0       0       5        0.0%
+SFR2                 0      0       0       5        0.0%
+BITBANK2            50      0       0       6        0.0%
+BANK2               50      0       0       7        0.0%
+ABS                  0      0       7       8        0.0%
+BITBANK0            50      0       0       9        0.0%
+DATA                 0      0       7      10        0.0%
+
+
+Microchip Technology PIC Macro Assembler V1.44 build -154322312 
+Symbol Table                                                                                   Thu Dec 14 15:55:21 2017
+
+                       _i 0070               __CFG_CP$OFF 0000                        l60 07D2  
+                      l61 065D                        l62 04EB                        l81 0661  
+                      l90 06F5                        l82 07C8                        l83 0663  
+                      l68 04F0                        l69 057D                        l89 0668  
+                      u65 0564                       l700 0636                       l640 054E  
+                     l804 0777                       l644 0582                       l814 07A1  
+                     l670 05E9                       l762 06F9                       l690 060C  
+                     l588 07CC                       l758 06C6                       l598 04E4  
+                     l788 0760                       _RA3 002B                       _RC0 0038  
+                     _RC1 0039                       _RA6 002E                       _RB4 0034  
+                     _RA7 002F                       _RB5 0035                       _RB6 0036  
+                     _RB7 0037                       _RC6 003E                       _RC7 003F  
+                     u125 0615                       u145 063F                       u307 04F9  
+                     u317 0504                       u255 0780                       u407 05AB  
+                     u327 0510                       u417 05B6                       u337 051B  
+            __CFG_CPD$OFF 0000                       u275 07AA                       u195 06DC  
+                     u507 0651                       u427 05C2                       u347 0527  
+                     u517 06E9                       u437 05CD                       u357 0532  
+                     u607 070B                       u527 0671                       u447 05D9  
+                     u367 053E                       u617 0716                       u537 067C  
+                     u457 05E4                       u377 0549                       u297 0571  
+                     u707 079B                       u627 0722                       u547 0688  
+                     u467 05F8                       u387 0594                       u717 07BC  
+                     u637 072D                       u557 0693                       u477 0606  
+                     u397 059F                       u727 07DD                       u647 0739  
+                     u567 069F                       u487 0623                       u737 07ED  
+                     u657 0744                       u577 06AA                       u497 0630  
+                     u667 0750                       u587 06B6                       u677 075B  
+                     u597 06C1                       u687 076F                       u697 078E  
+            __CFG_LVP$OFF 0000                      _T0IF 005A                      _IOCB 0096  
+                    _TMR0 0001                      _WPUB 0095              __CFG_WRT$OFF 0000  
+                    _main 04CB                      btemp 007E             __CFG_BOREN$ON 0000  
+                    start 0000             __CFG_IESO$OFF 0000                     ?_main 0074  
+           __CFG_WDTE$OFF 0000                     _ANSEL 0188                     _PORTA 0005  
+                   _PORTC 0007                     _TRISA 0085                     _TRISB 0086  
+                   _TRISC 0087            __CFG_FCMEN$OFF 0000                     _count 0072  
+                   status 0003                     wtemp0 007E            __CFG_MCLRE$OFF 0000  
+         __initialization 07F9              __end_of_main 07F9                    ??_main 0074  
+                  _ANSELH 0189                    _OSCCON 008F            __CFG_PWRTE$OFF 0000  
+ __end_of__initialization 07FD            __pcstackCOMMON 0074                __pmaintext 04CB  
+    end_of_initialization 07FD       start_initialization 07F9  __CFG_FOSC$INTRC_NOCLKOUT 0000  
+             __pbssCOMMON 0070                 ___latbits 0001         __CFG_BOR4V$BOR40V 0000  
+           __size_of_main 032E                _OPTION_REG 0081  
